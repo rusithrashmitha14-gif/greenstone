@@ -51,33 +51,49 @@ export function WhyChooseUs() {
           />
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Principles Column */}
-          <div className="lg:col-span-7 space-y-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          {/* Principles Sticky Stacking Column */}
+          <div className="lg:col-span-7 space-y-6">
             {principles.map((item, idx) => {
               const Icon = item.icon;
+              const topOffsetClasses = [
+                'lg:sticky lg:top-28',
+                'lg:sticky lg:top-36',
+                'lg:sticky lg:top-44',
+                'lg:sticky lg:top-52',
+                'lg:sticky lg:top-60',
+              ];
+
               return (
-                <FadeIn key={idx} delay={idx * 0.08} direction="up">
-                  <div className="p-5 sm:p-6 rounded-2xl bg-white border border-border-subtle hover:border-accent/30 transition-all duration-300 flex items-start gap-4 sm:gap-5 shadow-subtle card-hover-effect">
-                    <div className="p-3 rounded-xl bg-accent-light border border-accent/20 text-accent shrink-0">
+                <div
+                  key={idx}
+                  className={`${topOffsetClasses[idx]} transition-all duration-300`}
+                >
+                  <div className="p-6 sm:p-7 rounded-2xl bg-white border border-border-subtle hover:border-accent/40 transition-all duration-300 flex items-start gap-4 sm:gap-5 shadow-card hover:shadow-cardHover">
+                    <div className="p-3 rounded-xl bg-accent-light border border-accent/20 text-accent shrink-0 mt-0.5">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-text-primary">
-                        {item.title}
-                      </h3>
-                      <p className="mt-1.5 text-xs sm:text-sm text-text-secondary leading-relaxed">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-[10px] font-mono font-bold text-accent px-1.5 py-0.5 rounded bg-accent-light">
+                          0{idx + 1}
+                        </span>
+                        <h3 className="text-base sm:text-lg font-bold text-text-primary">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="mt-2 text-xs sm:text-sm text-text-secondary leading-relaxed">
                         {item.description}
                       </p>
                     </div>
                   </div>
-                </FadeIn>
+                </div>
               );
             })}
           </div>
 
-          {/* Visual Showcase Panel */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          {/* Sticky Visual Showcase Panel */}
+          <div className="lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28 self-start">
             <FadeIn direction="left" delay={0.2}>
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-border-subtle bg-bg-secondary shadow-card">
                 <Image
