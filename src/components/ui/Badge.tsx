@@ -15,10 +15,10 @@ export function Badge({
   icon,
 }: BadgeProps) {
   const variants = {
-    accent: 'bg-accent/15 text-accent border border-accent/30',
-    subtle: 'bg-bg-card text-text-secondary border border-border-subtle',
+    accent: 'bg-accent-light text-accent border border-accent/25 font-semibold',
+    subtle: 'bg-white text-text-secondary border border-border-subtle shadow-subtle',
     outline: 'bg-transparent text-text-secondary border border-border-subtle',
-    demo: 'bg-amber-500/10 text-amber-300 border border-amber-500/30 font-medium',
+    demo: 'bg-amber-50 text-amber-800 border border-amber-200/80 font-medium',
   };
 
   return (

@@ -57,8 +57,8 @@ export function Navbar() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled
-            ? 'glass-header py-3.5 shadow-card'
-            : 'bg-gradient-to-b from-bg-primary/90 via-bg-primary/40 to-transparent py-5 sm:py-6'
+            ? 'glass-header py-3.5 shadow-subtle'
+            : 'bg-gradient-to-b from-bg-primary/95 via-bg-primary/60 to-transparent py-4 sm:py-5'
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +69,7 @@ export function Navbar() {
               className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1 -m-1"
               aria-label="Greenstone Landscaping - Home"
             >
-              <div className="w-10 h-10 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center text-accent transition-transform duration-300 group-hover:scale-105 group-hover:bg-accent group-hover:text-bg-primary">
+              <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shadow-sm transition-transform duration-300 group-hover:scale-105 group-hover:bg-accent-hover">
                 <svg
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ export function Navbar() {
                 <span className="text-lg sm:text-xl font-bold tracking-tight text-text-primary leading-none group-hover:text-accent transition-colors">
                   GREENSTONE
                 </span>
-                <span className="text-[10px] sm:text-[11px] font-medium tracking-[0.2em] text-text-secondary uppercase mt-0.5">
+                <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] text-accent uppercase mt-0.5">
                   Landscaping • Tampa
                 </span>
               </div>
@@ -104,8 +104,8 @@ export function Navbar() {
                     className={cn(
                       'px-3.5 py-2 rounded-lg text-sm font-medium transition-colors duration-150',
                       isActive
-                        ? 'text-accent bg-accent/10 font-semibold'
-                        : 'text-text-secondary hover:text-text-primary hover:bg-white/[0.04]'
+                        ? 'text-accent bg-accent-light font-semibold'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-black/[0.03]'
                     )}
                   >
                     {link.label}
@@ -126,7 +126,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2.5 rounded-lg text-text-primary hover:text-accent hover:bg-white/[0.05] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="md:hidden p-2.5 rounded-lg text-text-primary hover:text-accent hover:bg-black/[0.04] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
             >
@@ -143,7 +143,7 @@ export function Navbar() {
       {/* Mobile Menu Drawer Overlay */}
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-black/70 backdrop-blur-sm transition-opacity duration-300 md:hidden',
+          'fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden',
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         )}
         onClick={() => setIsMobileMenuOpen(false)}
@@ -153,7 +153,7 @@ export function Navbar() {
       {/* Mobile Menu Drawer */}
       <div
         className={cn(
-          'fixed top-0 right-0 bottom-0 z-50 w-full max-w-xs bg-bg-secondary border-l border-border-subtle p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out md:hidden',
+          'fixed top-0 right-0 bottom-0 z-50 w-full max-w-xs bg-bg-card border-l border-border-subtle p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out md:hidden',
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
@@ -165,7 +165,7 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="flex items-center gap-2"
             >
-              <div className="w-8 h-8 rounded-lg bg-accent/20 text-accent flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center">
                 <svg
                   className="w-4 h-4"
                   viewBox="0 0 24 24"
@@ -199,8 +199,8 @@ export function Navbar() {
                   className={cn(
                     'px-4 py-3 rounded-lg text-base font-medium transition-colors flex items-center justify-between',
                     isActive
-                      ? 'text-accent bg-accent/10 font-semibold'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-white/[0.04]'
+                      ? 'text-accent bg-accent-light font-semibold'
+                      : 'text-text-secondary hover:text-text-primary hover:bg-black/[0.03]'
                   )}
                 >
                   <span>{link.label}</span>

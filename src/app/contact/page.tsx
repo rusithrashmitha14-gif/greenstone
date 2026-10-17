@@ -53,7 +53,7 @@ export default function ContactPage() {
             Ready to reimagine your outdoor space? Tell us about your property and ideas to schedule a consultation with our Tampa landscape team.
           </p>
 
-          <div className="mt-6 inline-flex items-center gap-2 p-3 rounded-xl bg-bg-card border border-border-subtle text-xs text-text-muted">
+          <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted shadow-subtle">
             <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
             <span>
               <strong>Brandspire Demo Concept:</strong> This contact page demonstrates high-conversion lead generation for landscaping firms. Information submitted here is processed in demo mode.
@@ -66,14 +66,14 @@ export default function ContactPage() {
           {/* Left Column: Context, Service Area & What to Expect */}
           <div className="lg:col-span-5 space-y-8">
             {/* Contact Placeholders Card */}
-            <div className="p-6 sm:p-7 rounded-3xl bg-bg-card border border-border-subtle space-y-5">
+            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-border-subtle space-y-5 shadow-card">
               <h2 className="text-sm font-bold uppercase tracking-wider text-text-primary">
                 Fictional Contact Information (Demo)
               </h2>
 
               <div className="space-y-4 text-sm text-text-secondary">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-accent-light text-accent shrink-0 mt-0.5">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-accent-light text-accent shrink-0 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-accent-light text-accent shrink-0 mt-0.5">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-accent-light text-accent shrink-0 mt-0.5">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
             </div>
 
             {/* What to Expect */}
-            <div className="p-6 sm:p-7 rounded-3xl bg-bg-card border border-border-subtle space-y-4">
+            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-border-subtle space-y-4 shadow-card">
               <h2 className="text-sm font-bold uppercase tracking-wider text-text-primary">
                 What to Expect Next
               </h2>
@@ -145,7 +145,7 @@ export default function ContactPage() {
             </div>
 
             {/* Service Areas */}
-            <div className="p-6 rounded-3xl bg-bg-secondary border border-border-subtle">
+            <div className="p-6 rounded-3xl bg-white border border-border-subtle shadow-card">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-text-primary mb-3">
                 Key Neighborhoods Served
               </h3>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                 {serviceAreas.map((area) => (
                   <span
                     key={area}
-                    className="px-2.5 py-1 text-xs rounded-md bg-bg-card text-text-secondary border border-border-subtle"
+                    className="px-2.5 py-1 text-xs rounded-md bg-bg-secondary text-text-secondary border border-border-subtle"
                   >
                     {area}
                   </span>

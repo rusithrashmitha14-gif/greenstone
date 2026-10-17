@@ -3,10 +3,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Sparkles, Filter, Layers } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { ProjectItem } from '@/data/projects';
 import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
 
 interface PortfolioFilterGridProps {
   projects: ProjectItem[];
@@ -46,14 +45,14 @@ export function PortfolioFilterGrid({ projects }: PortfolioFilterGridProps) {
               onClick={() => setSelectedFilter(cat.key)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
                 isActive
-                  ? 'bg-accent text-bg-primary shadow-glow scale-[1.02]'
-                  : 'bg-bg-card hover:bg-bg-cardHover text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-light'
+                  ? 'bg-accent text-white shadow-glow scale-[1.02]'
+                  : 'bg-white hover:bg-bg-cardHover text-text-secondary hover:text-text-primary border border-border-subtle hover:border-accent/30 shadow-subtle'
               }`}
             >
               <span>{cat.label}</span>
               <span
                 className={`text-[10px] px-1.5 py-0.5 rounded-full ${
-                  isActive ? 'bg-bg-primary/20 text-bg-primary' : 'bg-bg-secondary text-text-muted'
+                  isActive ? 'bg-white/25 text-white' : 'bg-bg-secondary text-text-muted'
                 }`}
               >
                 {count}
@@ -68,11 +67,11 @@ export function PortfolioFilterGrid({ projects }: PortfolioFilterGridProps) {
         {filteredProjects.map((project) => (
           <article
             key={project.slug}
-            className="group rounded-3xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col justify-between card-hover-effect"
+            className="group rounded-3xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col justify-between card-hover-effect shadow-subtle"
           >
             <div>
               {/* Image Container */}
-              <div className="relative aspect-[16/11] overflow-hidden bg-bg-primary">
+              <div className="relative aspect-[16/11] overflow-hidden bg-bg-secondary">
                 <Image
                   src={project.heroImage}
                   alt={project.title}
@@ -80,16 +79,16 @@ export function PortfolioFilterGrid({ projects }: PortfolioFilterGridProps) {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-black/10 to-transparent" />
 
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-bg-primary/90 text-text-primary border border-border-subtle backdrop-blur-md">
+                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
                     {project.category}
                   </span>
                   <Badge variant="demo">Demo Concept</Badge>
                 </div>
 
-                <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-xs text-text-secondary bg-bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-border-subtle">
+                <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-xs text-text-secondary bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-border-subtle shadow-subtle">
                   <MapPin className="w-3.5 h-3.5 text-accent" />
                   <span>{project.location}</span>
                 </div>
@@ -124,7 +123,7 @@ export function PortfolioFilterGrid({ projects }: PortfolioFilterGridProps) {
             <div className="p-6 sm:p-7 pt-0">
               <Link
                 href={`/work/${project.slug}`}
-                className="w-full py-3 px-4 rounded-xl bg-bg-secondary hover:bg-accent hover:text-bg-primary border border-border-subtle hover:border-accent text-xs font-semibold text-text-primary transition-all flex items-center justify-between group/btn shadow-sm"
+                className="w-full py-3 px-4 rounded-xl bg-bg-secondary hover:bg-accent hover:text-white border border-border-subtle hover:border-accent text-xs font-semibold text-text-primary transition-all flex items-center justify-between group/btn shadow-xs"
               >
                 <span>View Full Project Study & Gallery</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />

@@ -35,7 +35,7 @@ export default function ServicesPage() {
             <a
               key={s.id}
               href={`#${s.slug}`}
-              className="px-3.5 py-1.5 rounded-lg bg-bg-card hover:bg-bg-cardHover border border-border-subtle hover:border-accent text-xs font-medium text-text-secondary hover:text-text-primary transition-all"
+              className="px-3.5 py-1.5 rounded-lg bg-white hover:bg-accent-light border border-border-subtle hover:border-accent/40 text-xs font-medium text-text-secondary hover:text-accent transition-all shadow-subtle"
             >
               {s.title}
             </a>
@@ -70,7 +70,7 @@ export default function ServicesPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-transparent to-black/20" />
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-md text-xs font-mono font-bold bg-bg-primary/90 text-accent border border-border-subtle backdrop-blur-md">
+                      <span className="px-3 py-1 rounded-md text-xs font-mono font-bold bg-white/95 text-accent border border-accent/20 backdrop-blur-md shadow-subtle">
                         0{index + 1} // {service.title}
                       </span>
                     </div>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Florida Focus Callout */}
-                    <div className="mt-3 p-4 rounded-xl bg-accent/5 border border-accent/20">
+                    <div className="mt-3 p-4 rounded-xl bg-accent-light border border-accent/25">
                       <div className="flex items-center gap-1.5 text-accent text-xs font-bold uppercase tracking-wider mb-1">
                         <SunMedium className="w-3.5 h-3.5" />
                         <span>Florida Climate Advantage</span>

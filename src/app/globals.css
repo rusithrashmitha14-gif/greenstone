@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #101210;
-  --bg-secondary: #191D19;
-  --text-primary: #F7F8F5;
-  --text-secondary: #B6BDB3;
-  --accent: #8BCF58;
+  --bg-primary: #FAFCF8;
+  --bg-secondary: #F0F5ED;
+  --text-primary: #172619;
+  --text-secondary: #4A584A;
+  --accent: #2D7A47;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  background-color: #101210;
-  color: #F7F8F5;
+  background-color: #FAFCF8;
+  color: #172619;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,13 +25,13 @@ body {
 }
 
 ::selection {
-  background-color: #8BCF58;
-  color: #101210;
+  background-color: #D3ECCD;
+  color: #172619;
 }
 
 /* Accessible focus ring */
 :focus-visible {
-  outline: 2px solid #8BCF58;
+  outline: 2px solid #2D7A47;
   outline-offset: 3px;
 }
 
@@ -40,34 +40,29 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #101210;
+  background: #F0F5ED;
 }
 ::-webkit-scrollbar-thumb {
-  background: #272E27;
+  background: #C8D8C5;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #384238;
+  background: #9BB897;
 }
 
 /* Glass effect utilities */
 .glass-header {
-  background: rgba(16, 18, 16, 0.82);
+  background: rgba(250, 252, 248, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.card-gradient {
-  background: linear-gradient(180deg, rgba(31, 36, 31, 0.9) 0%, rgba(25, 29, 25, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(226, 232, 223, 0.85);
 }
 
 .card-hover-effect {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .card-hover-effect:hover {
-  border-color: rgba(139, 207, 88, 0.35);
+  border-color: rgba(45, 122, 71, 0.35);
   transform: translateY(-3px);
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 16px 36px -12px rgba(23, 38, 25, 0.12);
 }

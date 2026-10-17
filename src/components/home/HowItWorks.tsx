@@ -55,10 +55,10 @@ export function HowItWorks() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
+                    <div className="w-12 h-12 rounded-xl bg-accent-light border border-accent/20 flex items-center justify-center text-accent">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-3xl font-extrabold text-border-light font-mono">
+                    <span className="text-3xl font-extrabold text-accent/25 font-mono">
                       {step.number}
                     </span>
                   </div>

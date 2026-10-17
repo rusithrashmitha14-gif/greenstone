@@ -66,10 +66,10 @@ export default function AboutPage() {
             We believe an outdoor space should be more than grass and shrubbery — it should be a sanctuary for living, gathering, and connecting with nature.
           </p>
 
-          <div className="mt-6 inline-flex items-center gap-2 p-3 rounded-xl bg-bg-card border border-border-subtle text-xs text-text-muted">
+          <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted shadow-subtle">
             <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
             <span>
-              <strong>Concept Portfolio Notice:</strong> Greenstone Landscaping is an original demonstration concept created by <strong className="text-text-secondary">Brandspire Web Agency</strong> to showcase high-conversion web experiences for landscape companies.
+              <strong>Concept Portfolio Notice:</strong> Greenstone Landscaping is an original demonstration concept created by <strong className="text-text-primary">Brandspire Web Agency</strong> to showcase high-conversion web experiences for landscape companies.
             </span>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function AboutPage() {
             </div>
 
             {/* Overlapping detail card */}
-            <div className="hidden sm:block absolute -bottom-6 -right-6 p-5 rounded-2xl bg-bg-secondary/95 border border-border-subtle backdrop-blur-md max-w-xs shadow-xl">
+            <div className="hidden sm:block absolute -bottom-6 -right-6 p-5 rounded-2xl bg-white/95 border border-border-subtle backdrop-blur-md max-w-xs shadow-card">
               <span className="text-[11px] font-bold text-accent uppercase tracking-wider block mb-1">
                 Tampa Bay Microclimates
               </span>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                   className="p-6 sm:p-7 rounded-2xl bg-bg-card border border-border-subtle card-hover-effect flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-accent-light border border-accent/20 flex items-center justify-center text-accent mb-6">
                       <Icon className="w-6 h-6" />
                     </div>
                     <h3 className="text-lg font-bold text-text-primary mb-2.5">

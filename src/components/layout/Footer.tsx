@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { MapPin, Mail, Phone, ArrowUpRight, ShieldCheck, Heart } from 'lucide-react';
+import { MapPin, Mail, Phone, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,10 +34,10 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-bg-secondary border-t border-border-subtle pt-16 sm:pt-20 pb-12">
+    <footer className="bg-bg-dark text-white border-t border-border-subtle pt-16 sm:pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-border-subtle">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-white/10">
           {/* Brand Column */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
@@ -45,7 +45,7 @@ export function Footer() {
                 href="/"
                 className="flex items-center gap-2.5 group inline-flex focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg p-1 -m-1"
               >
-                <div className="w-9 h-9 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center text-accent">
+                <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shadow-sm">
                   <svg
                     className="w-5 h-5"
                     viewBox="0 0 24 24"
@@ -58,35 +58,35 @@ export function Footer() {
                   </svg>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold tracking-tight text-text-primary">
+                  <span className="text-xl font-bold tracking-tight text-white group-hover:text-accent-bright transition-colors">
                     GREENSTONE
                   </span>
-                  <span className="text-[10px] font-medium tracking-[0.2em] text-text-secondary uppercase">
+                  <span className="text-[10px] font-semibold tracking-[0.2em] text-emerald-400 uppercase">
                     Landscaping • Tampa
                   </span>
                 </div>
               </Link>
 
-              <p className="mt-4 text-sm text-text-secondary leading-relaxed max-w-sm">
+              <p className="mt-4 text-sm text-emerald-100/80 leading-relaxed max-w-sm">
                 Transforming residential outdoor spaces across Tampa, Florida with architectural stone patios, lush subtropical botanical gardens, and dedicated estate lawn stewardship.
               </p>
 
               {/* Fictional demo notice badge */}
-              <div className="mt-6 p-3 rounded-xl bg-bg-card border border-border-subtle text-xs text-text-muted flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+              <div className="mt-6 p-3.5 rounded-xl bg-bg-darkCard border border-emerald-500/20 text-xs text-emerald-200/80 flex items-start gap-2.5 shadow-sm">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <p>
-                  <strong className="text-text-secondary">Portfolio Demo Concept:</strong> Fictional brand developed by Brandspire Web Agency to showcase high-end landscaping digital experiences.
+                  <strong className="text-white">Portfolio Demo Concept:</strong> Fictional brand developed by Brandspire Web Agency to showcase high-end landscaping digital experiences.
                 </p>
               </div>
             </div>
 
             {/* Social icon placeholders */}
             <div className="mt-8 flex items-center gap-3">
-              <span className="text-xs text-text-muted mr-1">Follow (Demo):</span>
+              <span className="text-xs text-emerald-300/70 mr-1">Follow (Demo):</span>
               {['Instagram', 'Houzz', 'Pinterest', 'LinkedIn'].map((platform) => (
                 <span
                   key={platform}
-                  className="px-2.5 py-1 text-xs rounded-md bg-bg-card border border-border-subtle text-text-secondary hover:text-accent hover:border-accent/40 cursor-default transition-colors"
+                  className="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-emerald-200 hover:text-white hover:border-emerald-400 cursor-default transition-colors"
                 >
                   {platform}
                 </span>
@@ -96,7 +96,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-text-primary mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-emerald-400 mb-4">
               Navigation
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -104,7 +104,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary hover:text-accent transition-colors flex items-center gap-1 group"
+                    className="text-emerald-100/75 hover:text-white transition-colors flex items-center gap-1 group"
                   >
                     <span>{link.label}</span>
                   </Link>
@@ -115,7 +115,7 @@ export function Footer() {
 
           {/* Services Links */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-text-primary mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-emerald-400 mb-4">
               Services
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -123,10 +123,10 @@ export function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-text-secondary hover:text-accent transition-colors flex items-center justify-between group"
+                    className="text-emerald-100/75 hover:text-white transition-colors flex items-center justify-between group"
                   >
                     <span>{item.label}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-accent" />
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-emerald-400" />
                   </Link>
                 </li>
               ))}
@@ -135,41 +135,41 @@ export function Footer() {
 
           {/* Contact & Tampa Bay Service Areas */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-text-primary mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-emerald-400 mb-4">
               Service Area & Contact
             </h3>
-            <div className="space-y-3 text-sm text-text-secondary mb-5">
+            <div className="space-y-3 text-sm text-emerald-100/80 mb-5">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-accent shrink-0 mt-1" />
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
                 <div>
-                  <p className="font-medium text-text-primary">Tampa, Florida, USA</p>
-                  <p className="text-xs text-text-muted mt-0.5">
+                  <p className="font-medium text-white">Tampa, Florida, USA</p>
+                  <p className="text-xs text-emerald-300/70 mt-0.5">
                     Hillsborough County & surrounding coastal bays
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-accent shrink-0" />
-                <span className="text-xs text-text-muted font-mono">
+                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span className="text-xs text-emerald-200/70 font-mono">
                   quotes@greenstone-demo.example
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-accent shrink-0" />
-                <span className="text-xs text-text-muted font-mono">
+                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span className="text-xs text-emerald-200/70 font-mono">
                   (813) 555-0194 (Fictional Demo)
                 </span>
               </div>
             </div>
 
-            <h4 className="text-xs font-semibold text-text-primary uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-2">
               Key Florida Service Areas
             </h4>
             <div className="flex flex-wrap gap-1.5">
               {serviceAreas.map((area) => (
                 <span
                   key={area}
-                  className="px-2 py-0.5 text-[11px] rounded bg-bg-card text-text-secondary border border-border-subtle"
+                  className="px-2 py-0.5 text-[11px] rounded bg-white/5 text-emerald-200 border border-white/10"
                 >
                   {area}
                 </span>
@@ -179,21 +179,21 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-muted">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-300/60">
           <p>© {currentYear} Greenstone Landscaping. Demonstration website concept.</p>
 
-          <div className="flex items-center gap-1.5 text-text-secondary">
+          <div className="flex items-center gap-1.5 text-emerald-200">
             <span>Crafted by</span>
-            <span className="font-semibold text-accent">Brandspire</span>
+            <span className="font-semibold text-emerald-400">Brandspire</span>
             <span>• Premium Agency Portfolio Concept</span>
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="hover:text-text-primary transition-colors">
+            <Link href="/contact" className="hover:text-white transition-colors">
               Request Free Quote
             </Link>
-            <span className="text-border-light">•</span>
-            <Link href="/about" className="hover:text-text-primary transition-colors">
+            <span className="text-white/20">•</span>
+            <Link href="/about" className="hover:text-white transition-colors">
               Concept Details
             </Link>
           </div>

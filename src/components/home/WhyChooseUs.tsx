@@ -56,7 +56,7 @@ export function WhyChooseUs() {
                   key={idx}
                   className="p-5 sm:p-6 rounded-2xl bg-bg-card border border-border-subtle hover:border-accent/30 transition-all duration-300 flex items-start gap-4 sm:gap-5"
                 >
-                  <div className="p-3 rounded-xl bg-accent/10 border border-accent/20 text-accent shrink-0">
+                  <div className="p-3 rounded-xl bg-accent-light border border-accent/20 text-accent shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
                   <div>
@@ -85,7 +85,7 @@ export function WhyChooseUs() {
               <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-black/20" />
 
               {/* Floating Tampa Climate Callout */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-bg-secondary/95 border border-border-subtle backdrop-blur-md">
+              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 border border-border-subtle backdrop-blur-md shadow-card">
                 <div className="flex items-center gap-2 text-accent mb-2">
                   <Sun className="w-4 h-4" />
                   <span className="text-xs font-bold uppercase tracking-wider">
@@ -102,7 +102,7 @@ export function WhyChooseUs() {
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-bg-card border border-border-subtle flex items-center justify-between">
+            <div className="p-5 rounded-2xl bg-bg-card border border-border-subtle flex items-center justify-between shadow-subtle">
               <div>
                 <span className="text-xs uppercase tracking-wider text-text-muted font-medium">
                   Demonstration Standard
@@ -111,7 +111,7 @@ export function WhyChooseUs() {
                   Concept Principles for Brandspire Portfolio
                 </p>
               </div>
-              <span className="px-2.5 py-1 rounded bg-accent/15 text-accent text-xs font-semibold">
+              <span className="px-2.5 py-1 rounded bg-accent-light text-accent text-xs font-semibold">
                 Demo Ready
               </span>
             </div>

@@ -85,7 +85,7 @@ export function ProjectTransformations() {
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-black/20 to-transparent" />
 
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                    <span className="text-[11px] font-semibold px-2.5 py-1 rounded bg-bg-primary/90 text-text-primary border border-border-subtle backdrop-blur-md">
+                    <span className="text-[11px] font-semibold px-2.5 py-1 rounded bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
                       {scenario.neighborhood}
                     </span>
                     <Badge variant="demo">Demo Concept</Badge>
@@ -136,7 +136,7 @@ export function ProjectTransformations() {
               <div className="p-6 pt-0">
                 <Link
                   href="/contact"
-                  className="w-full py-2.5 px-4 rounded-lg bg-bg-secondary hover:bg-accent hover:text-bg-primary border border-border-subtle hover:border-accent text-xs font-semibold text-text-primary transition-all flex items-center justify-between group"
+                  className="w-full py-2.5 px-4 rounded-lg bg-bg-secondary hover:bg-accent hover:text-white border border-border-subtle hover:border-accent text-xs font-semibold text-text-primary transition-all flex items-center justify-between group shadow-xs"
                 >
                   <span>Discuss a Similar Project</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

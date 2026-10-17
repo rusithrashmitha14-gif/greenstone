@@ -96,7 +96,6 @@ export function QuoteForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Mark all as touched
     setTouched({
       name: true,
       email: true,
@@ -122,7 +121,6 @@ export function QuoteForm() {
 
     setIsSubmitting(true);
 
-    // Simulate realistic form submission processing
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmittedData({ ...formData });
@@ -145,15 +143,14 @@ export function QuoteForm() {
     setTouched({});
   };
 
-  // If successfully validated and submitted in demo mode:
   if (submittedData) {
     return (
-      <div className="rounded-3xl bg-bg-card border border-border-subtle p-8 sm:p-12 shadow-2xl">
-        <div className="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/30 text-accent flex items-center justify-center mb-6">
+      <div className="rounded-3xl bg-white border border-border-subtle p-8 sm:p-12 shadow-card">
+        <div className="w-14 h-14 rounded-2xl bg-accent-light border border-accent/25 text-accent flex items-center justify-center mb-6 shadow-xs">
           <CheckCircle2 className="w-8 h-8" />
         </div>
 
-        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-accent/15 text-accent border border-accent/30 uppercase tracking-wider">
+        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-accent-light text-accent border border-accent/25 uppercase tracking-wider">
           Validation Successful • Demo Mode Active
         </span>
 
@@ -171,7 +168,7 @@ export function QuoteForm() {
         </div>
 
         {/* Summary of validated input */}
-        <div className="mt-6 p-5 rounded-2xl bg-bg-primary border border-border-subtle space-y-2.5 text-xs">
+        <div className="mt-6 p-5 rounded-2xl bg-bg-secondary/70 border border-border-subtle space-y-2.5 text-xs">
           <div className="text-[11px] font-semibold uppercase text-text-muted tracking-wider pb-2 border-b border-border-subtle">
             Validated Lead Information:
           </div>
@@ -224,7 +221,7 @@ export function QuoteForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-3xl bg-bg-card border border-border-subtle p-6 sm:p-10 shadow-2xl space-y-6"
+      className="rounded-3xl bg-white border border-border-subtle p-6 sm:p-10 shadow-card space-y-6"
     >
       <div className="border-b border-border-subtle pb-6">
         <h2 className="text-2xl font-bold text-text-primary">
@@ -252,14 +249,14 @@ export function QuoteForm() {
             aria-required="true"
             aria-invalid={!!errors.name}
             aria-describedby={errors.name ? 'name-error' : undefined}
-            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary text-text-primary text-sm border transition-colors focus:outline-none focus:ring-2 focus:ring-accent ${
+            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary/60 text-text-primary text-sm border transition-colors focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
               errors.name && touched.name
-                ? 'border-red-500/80 bg-red-950/10'
+                ? 'border-red-500 bg-red-50/50'
                 : 'border-border-subtle focus:border-accent'
             }`}
           />
           {errors.name && touched.name && (
-            <p id="name-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <p id="name-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" />
               <span>{errors.name}</span>
             </p>
@@ -282,14 +279,14 @@ export function QuoteForm() {
             aria-required="true"
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? 'email-error' : undefined}
-            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary text-text-primary text-sm border transition-colors focus:outline-none focus:ring-2 focus:ring-accent ${
+            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary/60 text-text-primary text-sm border transition-colors focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
               errors.email && touched.email
-                ? 'border-red-500/80 bg-red-950/10'
+                ? 'border-red-500 bg-red-50/50'
                 : 'border-border-subtle focus:border-accent'
             }`}
           />
           {errors.email && touched.email && (
-            <p id="email-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <p id="email-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" />
               <span>{errors.email}</span>
             </p>
@@ -310,7 +307,7 @@ export function QuoteForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(813) 555-0100"
-            className="w-full px-4 py-3 rounded-xl bg-bg-secondary text-text-primary text-sm border border-border-subtle focus:border-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-xl bg-bg-secondary/60 text-text-primary text-sm border border-border-subtle focus:bg-white focus:border-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
 
@@ -328,9 +325,9 @@ export function QuoteForm() {
             aria-required="true"
             aria-invalid={!!errors.location}
             aria-describedby={errors.location ? 'location-error' : undefined}
-            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary text-text-primary text-sm border transition-colors focus:outline-none focus:ring-2 focus:ring-accent ${
+            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary/60 text-text-primary text-sm border transition-colors focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
               errors.location && touched.location
-                ? 'border-red-500/80 bg-red-950/10'
+                ? 'border-red-500 bg-red-50/50'
                 : 'border-border-subtle focus:border-accent'
             }`}
           >
@@ -345,7 +342,7 @@ export function QuoteForm() {
             <option value="Other Tampa Bay Location">Other Tampa Bay Location</option>
           </select>
           {errors.location && touched.location && (
-            <p id="location-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <p id="location-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" />
               <span>{errors.location}</span>
             </p>
@@ -368,9 +365,9 @@ export function QuoteForm() {
             aria-required="true"
             aria-invalid={!!errors.service}
             aria-describedby={errors.service ? 'service-error' : undefined}
-            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary text-text-primary text-sm border transition-colors focus:outline-none focus:ring-2 focus:ring-accent ${
+            className={`w-full px-4 py-3 rounded-xl bg-bg-secondary/60 text-text-primary text-sm border transition-colors focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
               errors.service && touched.service
-                ? 'border-red-500/80 bg-red-950/10'
+                ? 'border-red-500 bg-red-50/50'
                 : 'border-border-subtle focus:border-accent'
             }`}
           >
@@ -384,7 +381,7 @@ export function QuoteForm() {
             <option value="Tree & Specimen Palm Care">Tree & Specimen Palm Care</option>
           </select>
           {errors.service && touched.service && (
-            <p id="service-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <p id="service-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" />
               <span>{errors.service}</span>
             </p>
@@ -401,7 +398,7 @@ export function QuoteForm() {
             name="budget"
             value={formData.budget}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl bg-bg-secondary text-text-primary text-sm border border-border-subtle focus:border-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-xl bg-bg-secondary/60 text-text-primary text-sm border border-border-subtle focus:bg-white focus:border-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
           >
             <option value="">Select budget range...</option>
             <option value="Under $10,000">Under $10,000</option>
@@ -429,14 +426,14 @@ export function QuoteForm() {
           aria-required="true"
           aria-invalid={!!errors.description}
           aria-describedby={errors.description ? 'description-error' : undefined}
-          className={`w-full px-4 py-3 rounded-xl bg-bg-secondary text-text-primary text-sm border transition-colors focus:outline-none focus:ring-2 focus:ring-accent ${
+          className={`w-full px-4 py-3 rounded-xl bg-bg-secondary/60 text-text-primary text-sm border transition-colors focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
             errors.description && touched.description
-              ? 'border-red-500/80 bg-red-950/10'
+              ? 'border-red-500 bg-red-50/50'
               : 'border-border-subtle focus:border-accent'
           }`}
         />
         {errors.description && touched.description && (
-          <p id="description-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+          <p id="description-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
             <AlertCircle className="w-3.5 h-3.5" />
             <span>{errors.description}</span>
           </p>
@@ -456,7 +453,7 @@ export function QuoteForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-3.5 px-6 rounded-xl bg-accent text-bg-primary font-bold text-sm hover:bg-accent-hover shadow-glow transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full py-3.5 px-6 rounded-xl bg-accent text-white font-bold text-sm hover:bg-accent-hover shadow-glow transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

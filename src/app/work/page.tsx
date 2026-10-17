@@ -29,7 +29,7 @@ export default function WorkPage() {
           </p>
 
           {/* Fictional Concept Banner */}
-          <div className="mt-6 inline-flex items-center gap-2 p-3 rounded-xl bg-bg-card border border-border-subtle text-xs text-text-muted text-left">
+          <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted text-left shadow-subtle">
             <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
             <span>
               <strong>Demonstration Portfolio:</strong> The case studies below represent concept designs created for Brandspire’s agency showcase.

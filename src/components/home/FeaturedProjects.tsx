@@ -47,15 +47,15 @@ export function FeaturedProjects() {
 
                   {/* Badges on image */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
-                    <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-bg-primary/90 text-text-primary border border-border-subtle backdrop-blur-md">
+                    <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
                       {project.category}
                     </span>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-amber-500/10 text-amber-300 border border-amber-500/30 backdrop-blur-md">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-amber-50 text-amber-800 border border-amber-200/80 backdrop-blur-md">
                       Demo Concept
                     </span>
                   </div>
 
-                  <div className="absolute bottom-3 left-3.5 flex items-center gap-1.5 text-xs text-text-secondary bg-bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-border-subtle">
+                  <div className="absolute bottom-3 left-3.5 flex items-center gap-1.5 text-xs text-text-secondary bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-border-subtle shadow-subtle">
                     <MapPin className="w-3.5 h-3.5 text-accent" />
                     <span>{project.location}</span>
                   </div>

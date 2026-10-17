@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 export function FinalCTA() {
@@ -9,20 +9,20 @@ export function FinalCTA() {
       {/* Background Photography with Next.js Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=2000&q=85"
-          alt="Peaceful evening garden terrace with warm illumination and lush Florida landscaping"
+          src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=2000&q=85"
+          alt="Lush vibrant botanical garden in Florida with architectural tropical landscaping"
           fill
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Layered dark gradients for contrast */}
-        <div className="absolute inset-0 bg-bg-primary/85 sm:bg-bg-primary/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/70 to-bg-primary/80" />
+        {/* Layered light botanical overlays for clean typography contrast */}
+        <div className="absolute inset-0 bg-bg-primary/90 sm:bg-bg-primary/85" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/75 to-bg-primary/85" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Tampa Service Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bg-card/90 border border-accent/30 backdrop-blur-md mb-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-accent/25 backdrop-blur-md mb-6 shadow-subtle">
           <MapPin className="w-3.5 h-3.5 text-accent" />
           <span className="text-xs font-semibold uppercase tracking-wider text-text-primary">
             Serving Greater Tampa Bay & South Tampa
@@ -52,7 +52,7 @@ export function FinalCTA() {
         </div>
 
         {/* Contact reassurance strip */}
-        <div className="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-text-muted">
+        <div className="mt-10 pt-8 border-t border-border-subtle flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-text-muted">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             <span>Complimentary Initial Consultation</span>

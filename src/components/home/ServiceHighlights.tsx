@@ -32,7 +32,7 @@ export function ServiceHighlights() {
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-transparent to-black/20" />
-                  <span className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-bg-primary/90 text-accent border border-border-subtle backdrop-blur-md">
+                  <span className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/95 text-accent border border-accent/20 backdrop-blur-md shadow-subtle">
                     0{index + 1} // Discipline
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export function ServiceHighlights() {
           </div>
           <Link
             href="/contact"
-            className="shrink-0 px-6 py-3 rounded-lg bg-accent text-bg-primary font-semibold text-sm hover:bg-accent-hover transition-colors shadow-sm"
+            className="shrink-0 px-6 py-3 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-colors shadow-sm"
           >
             Schedule a Consultation
           </Link>

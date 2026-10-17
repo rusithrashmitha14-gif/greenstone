@@ -87,7 +87,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Project Header */}
         <div className="max-w-4xl mb-10">
           <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 rounded-md text-xs font-semibold bg-accent/15 text-accent border border-accent/30">
+            <span className="px-3 py-1 rounded-md text-xs font-semibold bg-accent-light text-accent border border-accent/25">
               {project.category}
             </span>
             <div className="flex items-center gap-1.5 text-xs text-text-secondary">
@@ -158,7 +158,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-accent/5 border border-accent/25">
+              <div className="p-6 rounded-2xl bg-accent-light border border-accent/25">
                 <h3 className="text-sm font-bold uppercase tracking-wider text-accent mb-2 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-accent" />
                   Design & Engineering Solution
@@ -222,7 +222,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                       sizes="(max-width: 768px) 100vw, 40vw"
                       className="object-cover hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute bottom-3 left-3 bg-bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] text-text-secondary border border-border-subtle">
+                    <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded text-[11px] text-text-secondary border border-border-subtle shadow-subtle">
                       Perspective 0{i + 1}
                     </div>
                   </div>

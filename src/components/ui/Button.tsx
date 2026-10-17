@@ -29,13 +29,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        'bg-accent text-bg-primary font-semibold hover:bg-accent-hover shadow-sm active:translate-y-px hover:shadow-glow',
+        'bg-accent text-white font-semibold hover:bg-accent-hover shadow-sm active:translate-y-px hover:shadow-glow',
       secondary:
-        'bg-bg-card hover:bg-bg-cardHover text-text-primary border border-border-subtle hover:border-border-light active:translate-y-px',
+        'bg-bg-card hover:bg-bg-cardHover text-text-primary border border-border-subtle hover:border-accent/40 shadow-subtle active:translate-y-px',
       outline:
-        'border border-border-light hover:border-accent text-text-primary hover:text-accent bg-transparent active:translate-y-px',
+        'border border-border-light hover:border-accent text-text-primary hover:text-accent bg-white/80 hover:bg-accent-light/30 active:translate-y-px',
       ghost:
-        'text-text-secondary hover:text-text-primary hover:bg-bg-secondary/60 bg-transparent',
+        'text-text-secondary hover:text-text-primary hover:bg-accent-light/40 bg-transparent',
     };
 
     const sizes = {
