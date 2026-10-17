@@ -17,6 +17,7 @@ import {
 import { projectsData } from '@/data/projects';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { FadeIn } from '@/components/ui/MotionWrapper';
 
 interface ProjectPageProps {
   params: {
@@ -85,38 +86,39 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Project Header */}
-        <div className="max-w-4xl mb-10">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 rounded-md text-xs font-semibold bg-accent-light text-accent border border-accent/25">
-              {project.category}
-            </span>
-            <div className="flex items-center gap-1.5 text-xs text-text-secondary">
-              <MapPin className="w-3.5 h-3.5 text-accent" />
-              <span>{project.location}</span>
+        <FadeIn>
+          <div className="max-w-4xl mb-10">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-3 py-1 rounded-md text-xs font-semibold bg-accent-light text-accent border border-accent/25">
+                {project.category}
+              </span>
+              <div className="flex items-center gap-1.5 text-xs text-text-secondary">
+                <MapPin className="w-3.5 h-3.5 text-accent" />
+                <span>{project.location}</span>
+              </div>
             </div>
+
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-text-primary tracking-tight leading-[1.1]">
+              {project.title}
+            </h1>
+
+            <p className="mt-5 text-base sm:text-xl text-text-secondary leading-relaxed">
+              {project.shortDescription}
+            </p>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-text-primary tracking-tight leading-[1.1]">
-            {project.title}
-          </h1>
-
-          <p className="mt-5 text-base sm:text-xl text-text-secondary leading-relaxed">
-            {project.shortDescription}
-          </p>
-        </div>
-
-        {/* Hero Image Showcase */}
-        <div className="relative aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-border-subtle bg-bg-card shadow-2xl mb-14">
-          <Image
-            src={project.heroImage}
-            alt={project.title}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/70 via-transparent to-transparent" />
-        </div>
+          {/* Hero Image Showcase */}
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-border-subtle bg-bg-card shadow-2xl mb-14">
+            <Image
+              src={project.heroImage}
+              alt={project.title}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+        </FadeIn>
 
         {/* Project Metrics Strip */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl bg-bg-card border border-border-subtle mb-16">

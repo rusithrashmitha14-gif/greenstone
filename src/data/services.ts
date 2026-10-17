@@ -23,10 +23,10 @@ export const servicesData: ServiceItem[] = [
     shortDescription:
       'Complete master planning, 3D architectural rendering, and bespoke spatial design tailored to your property’s layout and Florida sun exposure.',
     heroImage:
-      'https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=1200&q=80',
     ],
     fullDescription:
       'Our landscape design process transforms blank yards and dated layouts into cohesive outdoor sanctuaries. Every plan balances architectural symmetry, natural elevation transitions, and functional living zones tailored specifically to Tampa Bay’s climate.',
@@ -124,7 +124,7 @@ export const servicesData: ServiceItem[] = [
       'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1200&q=80',
     ],
     fullDescription:
       'Hardscape elements form the timeless backbone of luxury outdoor living. We engineer stable aggregate foundations, precision joint lines, and premium natural stone pavers designed to stay cool under barefoot sun exposure.',
@@ -170,9 +170,9 @@ export const servicesData: ServiceItem[] = [
     shortDescription:
       'Curated botanical gardens featuring native Florida flora, architectural palms, vibrant blooming perennials, and multi-layered foliage textures.',
     heroImage:
-      'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1527842891421-42eec6e703ea?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&w=1200&q=80',
     ],
     fullDescription:
@@ -219,9 +219,9 @@ export const servicesData: ServiceItem[] = [
     shortDescription:
       'Specialized care for mature specimen palms, native live oaks, ornamental flowering trees, and hedge shaping with strict arboricultural standards.',
     heroImage:
-      'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80',
     ],
     fullDescription:
@@ -268,10 +268,10 @@ export const servicesData: ServiceItem[] = [
     shortDescription:
       'Architectural pergolas, outdoor chef kitchens, custom fire features, and smart LED night lighting for comfortable evening entertaining.',
     heroImage:
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
     ],
     fullDescription:
       'Extend your home’s footprint with functional, luxurious outdoor rooms. We design sheltered pavilions, integrated kitchen counters, fire tables, and subtle architectural lighting that make evening gatherings unforgettable.',

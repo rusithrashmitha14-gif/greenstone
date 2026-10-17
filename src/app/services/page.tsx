@@ -7,6 +7,7 @@ import { servicesData } from '@/data/services';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { FadeIn } from '@/components/ui/MotionWrapper';
 
 export const metadata: Metadata = {
   title: 'Our Landscaping Services',
@@ -53,28 +54,28 @@ export default function ServicesPage() {
               id={service.slug}
               className="scroll-mt-28 border-t border-border-subtle pt-16 sm:pt-20 first:border-0 first:pt-0"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-                {/* Visual Imagery Column */}
-                <div
-                  className={`lg:col-span-6 space-y-4 ${
-                    isEven ? 'lg:order-2' : 'lg:order-1'
-                  }`}
-                >
-                  <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border-subtle bg-bg-card shadow-2xl">
-                    <Image
-                      src={service.heroImage}
-                      alt={service.title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-transparent to-black/20" />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-md text-xs font-mono font-bold bg-white/95 text-accent border border-accent/20 backdrop-blur-md shadow-subtle">
-                        0{index + 1} // {service.title}
-                      </span>
+              <FadeIn>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                  {/* Visual Imagery Column */}
+                  <div
+                    className={`lg:col-span-6 space-y-4 ${
+                      isEven ? 'lg:order-2' : 'lg:order-1'
+                    }`}
+                  >
+                    <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border-subtle bg-bg-card shadow-2xl">
+                      <Image
+                        src={service.heroImage}
+                        alt={service.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 rounded-md text-xs font-mono font-bold bg-white/95 text-accent border border-accent/20 backdrop-blur-md shadow-subtle">
+                          0{index + 1} // {service.title}
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
                   {/* Secondary Gallery Thumbnail Strip */}
                   <div className="grid grid-cols-2 gap-4">
@@ -164,8 +165,9 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-            </section>
-          );
+            </FadeIn>
+          </section>
+        );
         })}
       </div>
 

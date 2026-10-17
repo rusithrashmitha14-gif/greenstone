@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Sparkles, CheckCircle, Home, Trees, Layers } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Badge } from '@/components/ui/Badge';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 
 export function ProjectTransformations() {
   const scenarios = [
@@ -12,7 +13,7 @@ export function ProjectTransformations() {
       title: 'Expanding Living Space to the Outdoors',
       goal: 'Connect a newly renovated modern kitchen directly to an outdoor cooking, dining, and pool terrace.',
       image:
-        'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80',
+        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80',
       highlights: [
         'Large-format non-slip shellstone patio pavers',
         'Built-in stainless chef kitchen with natural gas barbecue',
@@ -60,98 +61,100 @@ export function ProjectTransformations() {
   return (
     <section className="py-20 sm:py-28 bg-bg-secondary relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Visionary Concepts"
-          title="What Your Outdoor Project Could Look Like"
-          description="Explore sample transformation scenarios showing how thoughtful Florida-friendly design, precision hardscaping, and lighting solve real property challenges."
-        />
+        <FadeIn>
+          <SectionHeading
+            eyebrow="Visionary Concepts"
+            title="What Your Outdoor Project Could Look Like"
+            description="Explore sample transformation scenarios showing how thoughtful Florida-friendly design, precision hardscaping, and lighting solve real property challenges."
+          />
+        </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {scenarios.map((scenario, index) => (
-            <div
-              key={index}
-              className="rounded-2xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col justify-between card-hover-effect"
-            >
-              <div>
-                {/* Visual Imagery */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-bg-primary">
-                  <Image
-                    src={scenario.image}
-                    alt={scenario.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-black/20 to-transparent" />
+            <StaggerItem key={index}>
+              <div className="rounded-2xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col justify-between card-hover-effect h-full">
+                <div>
+                  {/* Visual Imagery */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-bg-primary">
+                    <Image
+                      src={scenario.image}
+                      alt={scenario.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover"
+                    />
 
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                    <span className="text-[11px] font-semibold px-2.5 py-1 rounded bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
-                      {scenario.neighborhood}
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                      <span className="text-[11px] font-semibold px-2.5 py-1 rounded bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
+                        {scenario.neighborhood}
+                      </span>
+                      <Badge variant="demo">Demo Concept</Badge>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <span className="text-[11px] font-semibold tracking-wider text-accent uppercase">
+                      {scenario.focusArea}
                     </span>
-                    <Badge variant="demo">Demo Concept</Badge>
+                    <h3 className="text-xl font-bold text-text-primary mt-1 leading-snug">
+                      {scenario.title}
+                    </h3>
+
+                    <div className="mt-4 p-3.5 rounded-xl bg-bg-secondary/80 border border-border-subtle">
+                      <span className="text-[11px] uppercase tracking-wider text-text-muted font-semibold block mb-1">
+                        Design Objective:
+                      </span>
+                      <p className="text-xs text-text-secondary leading-relaxed">
+                        {scenario.goal}
+                      </p>
+                    </div>
+
+                    {/* Highlights list */}
+                    <div className="mt-5 space-y-2">
+                      <span className="text-xs font-semibold text-text-primary block">
+                        Transformation Features:
+                      </span>
+                      <ul className="space-y-1.5 text-xs text-text-secondary">
+                        {scenario.highlights.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <CheckCircle className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Envisioned Outcome Quote */}
+                    <blockquote className="mt-5 pt-4 border-t border-border-subtle/80 text-xs italic text-text-secondary leading-relaxed">
+                      {scenario.outcomeQuote}
+                    </blockquote>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <span className="text-[11px] font-semibold tracking-wider text-accent uppercase">
-                    {scenario.focusArea}
-                  </span>
-                  <h3 className="text-xl font-bold text-text-primary mt-1 leading-snug">
-                    {scenario.title}
-                  </h3>
-
-                  <div className="mt-4 p-3.5 rounded-xl bg-bg-secondary/80 border border-border-subtle">
-                    <span className="text-[11px] uppercase tracking-wider text-text-muted font-semibold block mb-1">
-                      Design Objective:
-                    </span>
-                    <p className="text-xs text-text-secondary leading-relaxed">
-                      {scenario.goal}
-                    </p>
-                  </div>
-
-                  {/* Highlights list */}
-                  <div className="mt-5 space-y-2">
-                    <span className="text-xs font-semibold text-text-primary block">
-                      Transformation Features:
-                    </span>
-                    <ul className="space-y-1.5 text-xs text-text-secondary">
-                      {scenario.highlights.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <CheckCircle className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Envisioned Outcome Quote */}
-                  <blockquote className="mt-5 pt-4 border-t border-border-subtle/80 text-xs italic text-text-secondary leading-relaxed">
-                    {scenario.outcomeQuote}
-                  </blockquote>
+                {/* Card Footer */}
+                <div className="p-6 pt-0">
+                  <Link
+                    href="/contact"
+                    className="w-full py-2.5 px-4 rounded-lg bg-bg-secondary hover:bg-accent hover:text-white border border-border-subtle hover:border-accent text-xs font-semibold text-text-primary transition-all flex items-center justify-between group shadow-xs"
+                  >
+                    <span>Discuss a Similar Project</span>
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </div>
               </div>
-
-              {/* Card Footer */}
-              <div className="p-6 pt-0">
-                <Link
-                  href="/contact"
-                  className="w-full py-2.5 px-4 rounded-lg bg-bg-secondary hover:bg-accent hover:text-white border border-border-subtle hover:border-accent text-xs font-semibold text-text-primary transition-all flex items-center justify-between group shadow-xs"
-                >
-                  <span>Discuss a Similar Project</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* Transparent Demo Notice */}
-        <div className="mt-10 p-4 rounded-xl bg-bg-card border border-border-subtle text-center text-xs text-text-muted max-w-2xl mx-auto">
-          <p>
-            <strong className="text-text-secondary">Note for Brandspire Visitors:</strong> These project scenarios demonstrate how we present case studies and transformation narratives for high-end landscaping businesses without relying on fabricated customer reviews.
-          </p>
-        </div>
+        <FadeIn delay={0.2}>
+          <div className="mt-10 p-4 rounded-xl bg-bg-card border border-border-subtle text-center text-xs text-text-muted max-w-2xl mx-auto">
+            <p>
+              <strong className="text-text-secondary">Note for Brandspire Visitors:</strong> These project scenarios demonstrate how we present case studies and transformation narratives for high-end landscaping businesses without relying on fabricated customer reviews.
+            </p>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

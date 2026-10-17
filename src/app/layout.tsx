@@ -57,6 +57,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { ScrollProgressBar } from '@/components/ui/MotionWrapper';
+
 export default function RootLayout({
   children,
 }: {
@@ -64,7 +66,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={manrope.variable}>
-      <body className="min-h-screen flex flex-col bg-bg-primary text-text-primary antialiased font-sans selection:bg-accent selection:text-bg-primary">
+      <body className="min-h-screen flex flex-col bg-bg-primary text-text-primary antialiased font-sans selection:bg-accent-light selection:text-text-primary">
+        <ScrollProgressBar />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

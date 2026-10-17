@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, MapPin } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ProjectItem } from '@/data/projects';
 import { Badge } from '@/components/ui/Badge';
 
@@ -63,36 +64,41 @@ export function PortfolioFilterGrid({ projects }: PortfolioFilterGridProps) {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project) => (
-          <article
-            key={project.slug}
-            className="group rounded-3xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col justify-between card-hover-effect shadow-subtle"
-          >
-            <div>
-              {/* Image Container */}
-              <div className="relative aspect-[16/11] overflow-hidden bg-bg-secondary">
-                <Image
-                  src={project.heroImage}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-black/10 to-transparent" />
+      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project) => (
+            <motion.article
+              layout
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
+              key={project.slug}
+              className="group rounded-3xl bg-bg-card border border-border-subtle overflow-hidden flex flex-col justify-between card-hover-effect shadow-subtle"
+            >
+              <div>
+                {/* Image Container */}
+                <div className="relative aspect-[16/11] overflow-hidden bg-bg-secondary">
+                  <Image
+                    src={project.heroImage}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
 
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
-                    {project.category}
-                  </span>
-                  <Badge variant="demo">Demo Concept</Badge>
-                </div>
+                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                    <span className="px-3 py-1 rounded-md text-xs font-semibold bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
+                      {project.category}
+                    </span>
+                    <Badge variant="demo">Demo Concept</Badge>
+                  </div>
 
-                <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-xs text-text-secondary bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-border-subtle shadow-subtle">
-                  <MapPin className="w-3.5 h-3.5 text-accent" />
-                  <span>{project.location}</span>
+                  <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-xs text-text-secondary bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-border-subtle shadow-subtle">
+                    <MapPin className="w-3.5 h-3.5 text-accent" />
+                    <span>{project.location}</span>
+                  </div>
                 </div>
-              </div>
 
               {/* Content */}
               <div className="p-6 sm:p-7">
@@ -129,9 +135,10 @@ export function PortfolioFilterGrid({ projects }: PortfolioFilterGridProps) {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </div>
-          </article>
-        ))}
-      </div>
+            </motion.article>
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
       {/* Filter result notice if empty */}
       {filteredProjects.length === 0 && (

@@ -16,6 +16,7 @@ import {
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 
 export const metadata: Metadata = {
   title: 'About Greenstone Landscaping | Design Philosophy & Florida Approach',
@@ -75,89 +76,91 @@ export default function AboutPage() {
         </div>
 
         {/* Story Section with Large Photography */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-24">
-          <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border-subtle bg-bg-card shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
-                alt="Architectural modern residential home and outdoor living space in Tampa Florida"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/60 via-transparent to-transparent" />
+        <FadeIn>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-24">
+            <div className="lg:col-span-6 relative">
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border-subtle bg-bg-card shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
+                  alt="Architectural modern residential home and outdoor living space in Tampa Florida"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Overlapping detail card */}
+              <div className="hidden sm:block absolute -bottom-6 -right-6 p-5 rounded-2xl bg-white/95 border border-border-subtle backdrop-blur-md max-w-xs shadow-card">
+                <span className="text-[11px] font-bold text-accent uppercase tracking-wider block mb-1">
+                  Tampa Bay Microclimates
+                </span>
+                <p className="text-xs text-text-secondary leading-relaxed">
+                  Balancing salt-spray resilience in coastal Davis Islands with shade management beneath grand oaks in Hyde Park.
+                </p>
+              </div>
             </div>
 
-            {/* Overlapping detail card */}
-            <div className="hidden sm:block absolute -bottom-6 -right-6 p-5 rounded-2xl bg-white/95 border border-border-subtle backdrop-blur-md max-w-xs shadow-card">
-              <span className="text-[11px] font-bold text-accent uppercase tracking-wider block mb-1">
-                Tampa Bay Microclimates
-              </span>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Balancing salt-spray resilience in coastal Davis Islands with shade management beneath grand oaks in Hyde Park.
+            <div className="lg:col-span-6 space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-text-primary">
+                Where Design Precision Meets Subtropical Vitality
+              </h2>
+              <p className="text-base text-text-secondary leading-relaxed">
+                Living in Tampa provides the rare privilege of year-round outdoor enjoyment. However, Florida’s intense climate — torrential summer rains, high humidity, alkaline sandy soils, and intense solar radiation — can quickly compromise poorly conceived landscapes.
               </p>
-            </div>
-          </div>
+              <p className="text-base text-text-secondary leading-relaxed">
+                Our approach unites landscape architecture with deep horticultural understanding. We treat every yard as an integrated ecosystem: engineering drainage to prevent standing pools, specifying heat-hardy native botanicals, and crafting travertine terraces that stay comfortable under barefoot heat.
+              </p>
 
-          <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-text-primary">
-              Where Design Precision Meets Subtropical Vitality
-            </h2>
-            <p className="text-base text-text-secondary leading-relaxed">
-              Living in Tampa provides the rare privilege of year-round outdoor enjoyment. However, Florida’s intense climate — torrential summer rains, high humidity, alkaline sandy soils, and intense solar radiation — can quickly compromise poorly conceived landscapes.
-            </p>
-            <p className="text-base text-text-secondary leading-relaxed">
-              Our approach unites landscape architecture with deep horticultural understanding. We treat every yard as an integrated ecosystem: engineering drainage to prevent standing pools, specifying heat-hardy native botanicals, and crafting travertine terraces that stay comfortable under barefoot heat.
-            </p>
-
-            <div className="pt-4 border-t border-border-subtle grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-bg-card border border-border-subtle">
-                <span className="text-2xl font-bold text-accent block font-mono">100%</span>
-                <span className="text-xs text-text-secondary mt-1 block">
-                  Tailored to your specific site orientation and soil
-                </span>
-              </div>
-              <div className="p-4 rounded-xl bg-bg-card border border-border-subtle">
-                <span className="text-2xl font-bold text-accent block font-mono">3D Plan</span>
-                <span className="text-xs text-text-secondary mt-1 block">
-                  Full visualization before any ground is excavated
-                </span>
+              <div className="pt-4 border-t border-border-subtle grid grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl bg-bg-card border border-border-subtle">
+                  <span className="text-2xl font-bold text-accent block font-mono">100%</span>
+                  <span className="text-xs text-text-secondary mt-1 block">
+                    Tailored to your specific site orientation and soil
+                  </span>
+                </div>
+                <div className="p-4 rounded-xl bg-bg-card border border-border-subtle">
+                  <span className="text-2xl font-bold text-accent block font-mono">3D Plan</span>
+                  <span className="text-xs text-text-secondary mt-1 block">
+                    Full visualization before any ground is excavated
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
 
         {/* Pillars of Design */}
         <div id="approach" className="scroll-mt-28 py-16 border-t border-border-subtle">
-          <SectionHeading
-            eyebrow="Core Principles"
-            title="Our Design Standards"
-            description="Four fundamental tenets that guide our concept planning, material curation, and installation standards."
-          />
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Core Principles"
+              title="Our Design Standards"
+              description="Four fundamental tenets that guide our concept planning, material curation, and installation standards."
+            />
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pillars.map((pillar, i) => {
               const Icon = pillar.icon;
               return (
-                <div
-                  key={i}
-                  className="p-6 sm:p-7 rounded-2xl bg-bg-card border border-border-subtle card-hover-effect flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="w-12 h-12 rounded-xl bg-accent-light border border-accent/20 flex items-center justify-center text-accent mb-6">
-                      <Icon className="w-6 h-6" />
+                <StaggerItem key={i}>
+                  <div className="p-6 sm:p-7 rounded-2xl bg-bg-card border border-border-subtle card-hover-effect flex flex-col justify-between h-full">
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-accent-light border border-accent/20 flex items-center justify-center text-accent mb-6">
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-lg font-bold text-text-primary mb-2.5">
+                        {pillar.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
+                        {pillar.description}
+                      </p>
                     </div>
-                    <h3 className="text-lg font-bold text-text-primary mb-2.5">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-                      {pillar.description}
-                    </p>
                   </div>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* The Florida Living Blueprint */}

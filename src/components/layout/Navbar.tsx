@@ -58,7 +58,7 @@ export function Navbar() {
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled
             ? 'glass-header py-3.5 shadow-subtle'
-            : 'bg-gradient-to-b from-bg-primary/95 via-bg-primary/60 to-transparent py-4 sm:py-5'
+            : 'bg-white/85 backdrop-blur-md border-b border-border-subtle/60 py-3.5 sm:py-4'
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

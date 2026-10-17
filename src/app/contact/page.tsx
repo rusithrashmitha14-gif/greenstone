@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { MapPin, Mail, Phone, Clock, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { QuoteForm } from '@/components/contact/QuoteForm';
 import { Badge } from '@/components/ui/Badge';
+import { FadeIn } from '@/components/ui/MotionWrapper';
 
 export const metadata: Metadata = {
   title: 'Request a Free Quote | Contact Greenstone Landscaping',
@@ -42,29 +43,32 @@ export default function ContactPage() {
     <div className="pt-28 sm:pt-36 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <Badge variant="accent" className="mb-4">
-            Complimentary Consultation
-          </Badge>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-text-primary tracking-tight leading-[1.1]">
-            Request a Free Project Quote
-          </h1>
-          <p className="mt-4 text-base sm:text-xl text-text-secondary leading-relaxed">
-            Ready to reimagine your outdoor space? Tell us about your property and ideas to schedule a consultation with our Tampa landscape team.
-          </p>
+        <FadeIn>
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <Badge variant="accent" className="mb-4">
+              Complimentary Consultation
+            </Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-text-primary tracking-tight leading-[1.1]">
+              Request a Free Project Quote
+            </h1>
+            <p className="mt-4 text-base sm:text-xl text-text-secondary leading-relaxed">
+              Ready to reimagine your outdoor space? Tell us about your property and ideas to schedule a consultation with our Tampa landscape team.
+            </p>
 
-          <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted shadow-subtle">
-            <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
-            <span>
-              <strong>Brandspire Demo Concept:</strong> This contact page demonstrates high-conversion lead generation for landscaping firms. Information submitted here is processed in demo mode.
-            </span>
+            <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted shadow-subtle">
+              <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
+              <span>
+                <strong>Brandspire Demo Concept:</strong> This contact page demonstrates high-conversion lead generation for landscaping firms. Information submitted here is processed in demo mode.
+              </span>
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
         {/* 2-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Context, Service Area & What to Expect */}
-          <div className="lg:col-span-5 space-y-8">
+        <FadeIn delay={0.15}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            {/* Left Column: Context, Service Area & What to Expect */}
+            <div className="lg:col-span-5 space-y-8">
             {/* Contact Placeholders Card */}
             <div className="p-6 sm:p-7 rounded-3xl bg-white border border-border-subtle space-y-5 shadow-card">
               <h2 className="text-sm font-bold uppercase tracking-wider text-text-primary">
@@ -167,7 +171,8 @@ export default function ContactPage() {
             <QuoteForm />
           </div>
         </div>
-      </div>
+      </FadeIn>
     </div>
+  </div>
   );
 }
