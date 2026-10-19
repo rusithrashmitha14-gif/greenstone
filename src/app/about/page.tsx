@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border-subtle bg-bg-card shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
+                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80"
                   alt="Architectural modern residential home and outdoor living space in Tampa Florida"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

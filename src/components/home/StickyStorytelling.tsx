@@ -1,24 +1,15 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Compass, Layers, Trees, Sparkles, Droplets, CheckCircle } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowRight, Compass, Layers, Trees, Sparkles, CheckCircle, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { FadeIn } from '@/components/ui/MotionWrapper';
 
 export function StickyStorytelling() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  });
-
-  // Background scale effect as user scrolls through the story
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
-  const bgBrightness = useTransform(scrollYProgress, [0, 0.5, 1], [0.85, 0.9, 0.75]);
+  const [activePhase, setActivePhase] = useState<number>(0);
 
   const chapters = [
     {
@@ -27,13 +18,15 @@ export function StickyStorytelling() {
       title: 'Precision Grading & Sub-Surface Storm Drainage',
       icon: Layers,
       description:
-        'Tampa receives over 50 inches of rain annually, often in torrential summer downpours. Before setting a single stone, we excavate 12–14 inches, install commercial geotextile stabilization, and conceal high-flow slot drains connected to sub-surface dry wells.',
+        'Tampa receives over 50 inches of rain annually, often in torrential summer downpours. Before laying any stone, we excavate 12–14 inches, install commercial geotextile stabilization, and conceal high-flow slot drains connected to sub-surface dry wells to guarantee zero standing water.',
       specs: [
         'Open-graded crushed granite sub-base',
         'Zero-puddling laser contour leveling',
         'Heavy-duty non-woven geotextile membrane',
       ],
       locationBadge: 'Davis Islands & South Tampa Sites',
+      image:
+        'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1600&q=80',
     },
     {
       step: 'Phase 02',
@@ -48,6 +41,8 @@ export function StickyStorytelling() {
         'Flush-threshold transitions without trip edges',
       ],
       locationBadge: 'Hyde Park & Palma Ceia Estates',
+      image:
+        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80',
     },
     {
       step: 'Phase 03',
@@ -62,6 +57,8 @@ export function StickyStorytelling() {
         'Triple-ground organic pine bark root cooling',
       ],
       locationBadge: 'Carrollwood & Beach Park Gardens',
+      image:
+        'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=80',
     },
     {
       step: 'Phase 04',
@@ -76,98 +73,155 @@ export function StickyStorytelling() {
         'Warm 2700K architectural color temperature',
       ],
       locationBadge: 'Greater Tampa Bay Evening Sanctuaries',
+      image:
+        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80',
     },
   ];
 
   return (
-    <section ref={containerRef} className="relative bg-forest text-white">
-      {/* Pinned Sticky Background */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden z-0">
-        <motion.div style={{ scale: bgScale }} className="relative w-full h-full">
-          <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85"
-            alt="Luxury Tampa modern landscaped backyard and pool terrace"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          {/* Subtle deep forest ambient overlay ensuring high text legibility while showing lush garden colors */}
-          <div className="absolute inset-0 bg-forest/70 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest via-transparent to-forest/50" />
-        </motion.div>
-
-        {/* Pinned Watermark & Progress Header */}
-        <div className="absolute top-6 left-6 right-6 flex items-center justify-between text-xs text-emerald-200/80 pointer-events-none">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-forest/80 backdrop-blur-md border border-white/10">
-            <span className="w-2 h-2 rounded-full bg-accent-bright animate-pulse" />
-            <span className="font-semibold uppercase tracking-wider text-white">
+    <section className="py-20 sm:py-28 bg-forest text-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <FadeIn>
+          <div className="max-w-3xl mb-14 sm:mb-20">
+            <Badge variant="accent" className="mb-4 !bg-accent-bright/20 !text-accent-bright !border-accent-bright/30">
               The Anatomy of an Outdoor Sanctuary
-            </span>
+            </Badge>
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.12]">
+              Engineered For Florida Living. Built To Last Generations.
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-emerald-100/90 leading-relaxed font-normal">
+              Behind every tranquil outdoor living space lies a methodical synthesis of civil engineering, agronomic science, and artisanal stonecraft. As you scroll, the landscape visual remains pinned while the engineering phases unfold.
+            </p>
           </div>
-          <span className="hidden sm:inline-block px-3 py-1.5 rounded-full bg-forest/80 backdrop-blur-md border border-white/10 text-emerald-100">
-            Scroll to inspect Florida build phases ↓
-          </span>
-        </div>
-      </div>
+        </FadeIn>
 
-      {/* Scrolling Content Cards Over Pinned Background */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-        {/* Story Intro */}
-        <div className="min-h-[60vh] flex flex-col justify-center max-w-2xl mb-16 sm:mb-24">
-          <Badge variant="accent" className="w-fit mb-4 !bg-accent-bright/20 !text-accent-bright !border-accent-bright/30">
-            Precision Craftsmanship
-          </Badge>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-            Engineered For Florida Living. Built To Last Generations.
-          </h2>
-          <p className="mt-5 text-base sm:text-xl text-emerald-100/90 leading-relaxed font-normal">
-            Behind every tranquil outdoor living space lies a methodical synthesis of civil engineering, agronomic science, and artisanal stonecraft. Scroll to explore how our transformations unfold.
-          </p>
-        </div>
+        {/* Sticky Split-Screen Experience */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          {/* Sticky Image Panel (Left) */}
+          <div className="lg:col-span-6 lg:sticky lg:top-28 self-start">
+            <div className="relative aspect-[4/3] lg:aspect-[4/4.5] rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-forest-dark">
+              <Image
+                src={chapters[activePhase].image}
+                alt={chapters[activePhase].title}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center transition-all duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-transparent to-black/20 pointer-events-none" />
 
-        {/* Story Stages Scrolling Cards */}
-        <div className="space-y-36 sm:space-y-48 pb-24">
-          {chapters.map((chapter, idx) => {
-            const Icon = chapter.icon;
-            const isEven = idx % 2 === 1;
+              {/* Floating Active Phase Badge */}
+              <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <span className="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-white/95 text-forest backdrop-blur-md shadow-subtle">
+                  {chapters[activePhase].step} // {chapters[activePhase].tagline}
+                </span>
+                <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-accent-bright/90 text-forest backdrop-blur-md">
+                  Active Blueprint
+                </span>
+              </div>
 
-            return (
-              <div
-                key={idx}
-                className={`flex flex-col ${
-                  isEven ? 'lg:items-end' : 'lg:items-start'
-                }`}
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, margin: '-100px' }}
-                  transition={{ duration: 0.6, ease: 'easeOut' }}
-                  className="w-full max-w-xl p-8 sm:p-10 rounded-3xl bg-white/95 backdrop-blur-xl border border-white/80 shadow-2xl text-text-primary"
+              {/* Bottom Caption Pill on Sticky Image */}
+              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-forest/85 backdrop-blur-md border border-white/15 text-xs text-emerald-100">
+                <div className="flex items-center gap-2 mb-1 text-accent-bright font-bold">
+                  <MapPin className="w-3.5 h-3.5" />
+                  <span>{chapters[activePhase].locationBadge}</span>
+                </div>
+                <p className="line-clamp-2 text-white/90">
+                  {chapters[activePhase].title}
+                </p>
+              </div>
+            </div>
+
+            {/* Quick Phase Jump Pills */}
+            <div className="mt-4 grid grid-cols-4 gap-2">
+              {chapters.map((ch, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActivePhase(idx)}
+                  className={`py-2 px-1 text-center rounded-xl text-xs font-semibold transition-all duration-200 border ${
+                    activePhase === idx
+                      ? 'bg-accent-bright text-forest border-accent-bright shadow-glow font-bold'
+                      : 'bg-white/10 text-emerald-200/80 hover:bg-white/15 border-white/10'
+                  }`}
+                >
+                  {ch.step}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Scrolling Story Narrative Cards (Right) */}
+          <div className="lg:col-span-6 space-y-8 sm:space-y-12">
+            {chapters.map((chapter, idx) => {
+              const Icon = chapter.icon;
+              const isActive = activePhase === idx;
+
+              return (
+                <div
+                  key={idx}
+                  onMouseEnter={() => setActivePhase(idx)}
+                  onClick={() => setActivePhase(idx)}
+                  className={`p-7 sm:p-9 rounded-3xl transition-all duration-300 border cursor-pointer ${
+                    isActive
+                      ? 'bg-white text-text-primary border-white shadow-2xl scale-[1.01]'
+                      : 'bg-white/10 text-white border-white/15 hover:bg-white/15'
+                  }`}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold tracking-wider px-2.5 py-1 rounded bg-accent-light text-forest border border-accent/20">
+                    <span
+                      className={`text-xs font-mono font-bold tracking-wider px-2.5 py-1 rounded ${
+                        isActive
+                          ? 'bg-accent-light text-forest border border-accent/20'
+                          : 'bg-white/15 text-emerald-200 border border-white/20'
+                      }`}
+                    >
                       {chapter.step} // {chapter.tagline}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-accent-light text-forest flex items-center justify-center">
+                    <div
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                        isActive
+                          ? 'bg-accent-light text-forest'
+                          : 'bg-white/15 text-accent-bright'
+                      }`}
+                    >
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-forest mt-2 leading-snug">
+                  <h3
+                    className={`text-xl sm:text-2xl font-extrabold mt-2 leading-snug ${
+                      isActive ? 'text-forest' : 'text-white'
+                    }`}
+                  >
                     {chapter.title}
                   </h3>
 
-                  <p className="mt-4 text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <p
+                    className={`mt-3.5 text-sm sm:text-base leading-relaxed ${
+                      isActive ? 'text-text-secondary' : 'text-emerald-100/90'
+                    }`}
+                  >
                     {chapter.description}
                   </p>
 
-                  <div className="mt-6 pt-5 border-t border-border-subtle">
-                    <span className="text-xs font-bold text-forest uppercase tracking-wider block mb-2.5">
+                  <div
+                    className={`mt-6 pt-5 border-t ${
+                      isActive ? 'border-border-subtle' : 'border-white/15'
+                    }`}
+                  >
+                    <span
+                      className={`text-xs font-bold uppercase tracking-wider block mb-2.5 ${
+                        isActive ? 'text-forest' : 'text-emerald-200'
+                      }`}
+                    >
                       Engineering Benchmarks:
                     </span>
-                    <ul className="space-y-2 text-xs sm:text-sm text-text-secondary">
+                    <ul
+                      className={`space-y-2 text-xs sm:text-sm ${
+                        isActive ? 'text-text-secondary' : 'text-emerald-100/90'
+                      }`}
+                    >
                       {chapter.specs.map((spec, sIdx) => (
                         <li key={sIdx} className="flex items-center gap-2.5">
                           <CheckCircle className="w-4 h-4 text-accent shrink-0" />
@@ -177,37 +231,21 @@ export function StickyStorytelling() {
                     </ul>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-border-subtle/80 flex items-center justify-between text-xs text-text-muted">
+                  <div
+                    className={`mt-5 pt-3.5 border-t flex items-center justify-between text-xs ${
+                      isActive
+                        ? 'border-border-subtle/80 text-text-muted'
+                        : 'border-white/10 text-emerald-200/70'
+                    }`}
+                  >
                     <span>Applied to:</span>
-                    <span className="font-semibold text-forest">{chapter.locationBadge}</span>
+                    <span className={`font-semibold ${isActive ? 'text-forest' : 'text-white'}`}>
+                      {chapter.locationBadge}
+                    </span>
                   </div>
-                </motion.div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Story Section Closer CTA */}
-        <div className="min-h-[50vh] flex flex-col items-center justify-center text-center max-w-2xl mx-auto pb-16">
-          <h3 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Ready to bring this level of precision to your property?
-          </h3>
-          <p className="mt-4 text-base text-emerald-100/90 leading-relaxed">
-            Let’s start with a comprehensive on-site analysis and elevation survey of your Tampa home.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <Button href="/contact" variant="primary" size="lg">
-              <span>Schedule On-Site Consultation</span>
-              <ArrowRight className="w-4 h-4 ml-1.5" />
-            </Button>
-            <Button
-              href="/work"
-              variant="secondary"
-              size="lg"
-              className="!bg-white/10 !text-white !border-white/20 hover:!bg-white/20"
-            >
-              <span>Explore Completed Projects</span>
-            </Button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

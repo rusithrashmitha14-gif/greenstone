@@ -2,10 +2,9 @@
 
 import React, { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
-import { ArrowLeftRight, CheckCircle2, Sparkles, MapPin, Eye } from 'lucide-react';
+import { ArrowLeftRight, CheckCircle2, Sparkles, MapPin } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
 import { FadeIn } from '@/components/ui/MotionWrapper';
 
 export function BeforeAfterShowcase() {
@@ -21,16 +20,16 @@ export function BeforeAfterShowcase() {
       beforeLabel: 'Before: Sinking Concrete & Water Pooling',
       afterLabel: 'After: Silver Travertine & Resilient Palms',
       beforeImage:
-        'https://images.unsplash.com/photo-1592417817098-8f3d69109853?auto=format&fit=crop&w=1600&q=80',
+        'https://images.unsplash.com/photo-1508873696983-2df5293cb325?auto=format&fit=crop&w=1600&q=80',
       afterImage:
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+        'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1600&q=80',
       stats: [
         { label: 'Drainage Improvement', value: '100% Zero Puddling' },
         { label: 'Surface Temperature', value: '-18°F Cool-Touch' },
-        { label: 'Property Appraisal Impact', value: 'High Positive' },
+        { label: 'Appraisal Impact', value: 'High Positive' },
       ],
       details:
-        'Existing failing concrete slab and patchy turf replaced with French-pattern silver travertine, concealed sub-surface dry wells, and architectural Bismarck palms.',
+        'Failing cracked concrete and patchy mud replaced with French-pattern silver travertine, concealed sub-surface dry wells, and architectural Bismarck palms.',
     },
     {
       title: 'Hyde Park Shaded Botanical Entrance',
@@ -38,7 +37,7 @@ export function BeforeAfterShowcase() {
       beforeLabel: 'Before: Bare Dirt & Oak Root Compaction',
       afterLabel: 'After: Lush Understory & Flamed Limestone',
       beforeImage:
-        'https://images.unsplash.com/photo-1508873696983-2df5293cb325?auto=format&fit=crop&w=1600&q=80',
+        'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=1600&q=80',
       afterImage:
         'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=80',
       stats: [
@@ -105,7 +104,7 @@ export function BeforeAfterShowcase() {
 
         {/* Interactive Comparison Container */}
         <FadeIn delay={0.15}>
-          <div className="bg-white rounded-3xl border border-border-subtle p-4 sm:p-7 shadow-card">
+          <div className="bg-white rounded-3xl border border-border-subtle p-4 sm:p-7 shadow-card max-w-5xl mx-auto">
             <div
               ref={containerRef}
               onMouseDown={() => setIsDragging(true)}
@@ -114,7 +113,7 @@ export function BeforeAfterShowcase() {
               onMouseMove={handleMouseMove}
               onTouchMove={handleTouchMove}
               onClick={(e) => handleMove(e.clientX)}
-              className="relative aspect-[16/10] sm:aspect-[21/10] rounded-2xl overflow-hidden select-none cursor-ew-resize bg-bg-primary shadow-subtle"
+              className="relative aspect-[16/10] sm:aspect-[21/10] rounded-2xl overflow-hidden select-none cursor-ew-resize bg-bg-primary shadow-subtle w-full"
             >
               {/* "AFTER" Image (Full background layer) */}
               <Image
@@ -132,20 +131,18 @@ export function BeforeAfterShowcase() {
                 <span>AFTER: Greenstone Master Plan</span>
               </div>
 
-              {/* "BEFORE" Image (Clipped overlay layer) */}
+              {/* "BEFORE" Image with CSS clip-path for 100% responsive clipping */}
               <div
-                className="absolute inset-0 overflow-hidden"
-                style={{ width: `${sliderPosition}%` }}
+                className="absolute inset-0 pointer-events-none"
+                style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
               >
-                <div className="relative w-full h-full min-w-[100vw] sm:min-w-[1200px]">
-                  <Image
-                    src={currentScenario.beforeImage}
-                    alt={currentScenario.beforeLabel}
-                    fill
-                    sizes="(max-width: 1200px) 100vw, 1200px"
-                    className="object-cover"
-                  />
-                </div>
+                <Image
+                  src={currentScenario.beforeImage}
+                  alt={currentScenario.beforeLabel}
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  className="object-cover"
+                />
               </div>
 
               {/* "BEFORE" Floating Badge (Left side) */}
@@ -165,7 +162,7 @@ export function BeforeAfterShowcase() {
 
               {/* Micro Drag Instruction Pill */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-white/90 border border-white/20 pointer-events-none">
-                Drag or tap anywhere to inspect transformation
+                Drag or tap anywhere to compare
               </div>
             </div>
 

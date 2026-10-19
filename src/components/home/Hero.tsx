@@ -1,8 +1,10 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { ArrowRight, Sparkles, Compass, Shield, SunMedium } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { FadeIn } from '@/components/ui/MotionWrapper';
+import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
@@ -10,7 +12,7 @@ export function Hero() {
       {/* Background Photography with Next.js Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2400&q=85"
           alt="Sun-drenched luxury modern landscaped backyard in Tampa Florida with stone patio, pool, lush tropical plants and outdoor living"
           fill
           priority
@@ -18,11 +20,15 @@ export function Hero() {
           className="object-cover object-center scale-[1.01] transform transition-transform duration-1000 ease-out"
         />
         {/* Subtle vignette so the landscape photography stays vivid and vibrant */}
-        <div className="absolute inset-0 bg-black/15 backdrop-blur-[0.5px]" />
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-[0.5px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <FadeIn delay={0.1}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
           <div className="max-w-2xl bg-white/94 backdrop-blur-lg rounded-3xl p-7 sm:p-11 border border-white/80 shadow-2xl">
             {/* Location Badge */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-accent-light/80 border border-accent/25 mb-5 shadow-xs">
@@ -68,7 +74,7 @@ export function Hero() {
               </span>
             </div>
           </div>
-        </FadeIn>
+        </motion.div>
       </div>
 
       {/* Feature Pillar Strip at Bottom */}
