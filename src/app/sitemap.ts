@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { projectsData } from '@/data/projects';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://greenstone-landscaping-demo.example';
+  const baseUrl = 'https://greenstone-landscaping.com';
   const currentDate = new Date().toISOString();
 
   const staticRoutes: MetadataRoute.Sitemap = [

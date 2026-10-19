@@ -63,9 +63,9 @@ export function ProjectTransformations() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <SectionHeading
-            eyebrow="Visionary Concepts"
+            eyebrow="Master Transformations"
             title="What Your Outdoor Project Could Look Like"
-            description="Explore sample transformation scenarios showing how thoughtful Florida-friendly design, precision hardscaping, and lighting solve real property challenges."
+            description="Explore signature transformation scenarios showing how thoughtful Florida-friendly design, precision hardscaping, and lighting solve real property challenges."
           />
         </FadeIn>
 
@@ -88,7 +88,7 @@ export function ProjectTransformations() {
                       <span className="text-[11px] font-semibold px-2.5 py-1 rounded bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
                         {scenario.neighborhood}
                       </span>
-                      <Badge variant="demo">Demo Concept</Badge>
+                      <Badge variant="subtle">Featured Transformation</Badge>
                     </div>
                   </div>
 
@@ -147,11 +147,11 @@ export function ProjectTransformations() {
           ))}
         </StaggerContainer>
 
-        {/* Transparent Demo Notice */}
+        {/* Consultation Callout */}
         <FadeIn delay={0.2}>
-          <div className="mt-10 p-4 rounded-xl bg-bg-card border border-border-subtle text-center text-xs text-text-muted max-w-2xl mx-auto">
+          <div className="mt-10 p-4 rounded-xl bg-bg-card border border-border-subtle text-center text-xs text-text-secondary max-w-2xl mx-auto shadow-subtle">
             <p>
-              <strong className="text-text-secondary">Note for Brandspire Visitors:</strong> These project scenarios demonstrate how we present case studies and transformation narratives for high-end landscaping businesses without relying on fabricated customer reviews.
+              Have a custom property layout in mind? Our master design team provides on-site elevation surveys and tailored 3D proposals for homes throughout Tampa Bay.
             </p>
           </div>
         </FadeIn>

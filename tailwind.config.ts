@@ -9,6 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        forest: {
+          DEFAULT: '#132317',
+          dark: '#0D170F',
+          light: '#1E3624',
+        },
         bg: {
           primary: '#FAFCF8',
           secondary: '#F0F5ED',

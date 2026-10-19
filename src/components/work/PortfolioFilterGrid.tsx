@@ -91,7 +91,7 @@ export function PortfolioFilterGrid({ projects }: PortfolioFilterGridProps) {
                     <span className="px-3 py-1 rounded-md text-xs font-semibold bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
                       {project.category}
                     </span>
-                    <Badge variant="demo">Demo Concept</Badge>
+                    <Badge variant="subtle">Featured Project</Badge>
                   </div>
 
                   <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-xs text-text-secondary bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-border-subtle shadow-subtle">

@@ -47,7 +47,7 @@ export const servicesData: ServiceItem[] = [
           'Detailed inspection of sunlight patterns, soil drainage, existing canopy, and utility easements.',
       },
       {
-        title: 'Architectural Concept Modeling',
+        title: '3D Architectural Master Planning',
         description:
           'Full-color 3D layouts showing seasonal blooms, nighttime lighting angles, and hardscape proportions.',
       },
@@ -58,7 +58,7 @@ export const servicesData: ServiceItem[] = [
       },
     ],
     deliverables: [
-      'Concept schematic & moodboard',
+      'Schematic 3D render & moodboard',
       'Full CAD landscape construction blueprint',
       'Botanical specification schedule',
       'Hardscape & lighting layout overlays',
@@ -124,7 +124,7 @@ export const servicesData: ServiceItem[] = [
       'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
     ],
     fullDescription:
       'Hardscape elements form the timeless backbone of luxury outdoor living. We engineer stable aggregate foundations, precision joint lines, and premium natural stone pavers designed to stay cool under barefoot sun exposure.',

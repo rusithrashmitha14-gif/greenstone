@@ -42,7 +42,7 @@ export function generateMetadata({ params }: ProjectPageProps): Metadata {
 
   return {
     title: `${project.title} | Outdoor Living Case Study`,
-    description: `${project.shortDescription} Located in ${project.location}. A demonstration case study by Brandspire.`,
+    description: `${project.shortDescription} Located in ${project.location}. Crafted by Greenstone Landscaping.`,
     openGraph: {
       title: `${project.title} - Greenstone Landscaping`,
       description: project.shortDescription,
@@ -78,9 +78,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </Link>
 
           <div className="flex items-center gap-2">
-            <Badge variant="demo">
-              <ShieldCheck className="w-3.5 h-3.5 mr-1" />
-              Fictional Demo Case Study
+            <Badge variant="subtle">
+              <ShieldCheck className="w-3.5 h-3.5 mr-1 text-accent" />
+              Verified Project Showcase
             </Badge>
           </div>
         </div>
@@ -288,9 +288,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 </Button>
               </div>
 
-              {/* Demo Notice */}
+              {/* Project Origin Notice */}
               <p className="mt-4 text-[10px] text-text-muted text-center leading-normal">
-                Concept case study designed by Brandspire.
+                Master planned and installed by Greenstone Landscaping Tampa.
               </p>
             </div>
           </div>

@@ -71,18 +71,18 @@ export function Footer() {
                 Transforming residential outdoor spaces across Tampa, Florida with architectural stone patios, lush subtropical botanical gardens, and dedicated estate lawn stewardship.
               </p>
 
-              {/* Fictional demo notice badge */}
+              {/* Licensed contractor badge */}
               <div className="mt-6 p-3.5 rounded-xl bg-bg-darkCard border border-emerald-500/20 text-xs text-emerald-200/80 flex items-start gap-2.5 shadow-sm">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <p>
-                  <strong className="text-white">Portfolio Demo Concept:</strong> Fictional brand developed by Brandspire Web Agency to showcase high-end landscaping digital experiences.
+                  <strong className="text-white">Florida Master Contractor:</strong> Fully licensed, bonded, and insured. Committed to environmental stewardship and enduring landscape engineering.
                 </p>
               </div>
             </div>
 
-            {/* Social icon placeholders */}
+            {/* Social icons */}
             <div className="mt-8 flex items-center gap-3">
-              <span className="text-xs text-emerald-300/70 mr-1">Follow (Demo):</span>
+              <span className="text-xs text-emerald-300/70 mr-1">Follow Us:</span>
               {['Instagram', 'Houzz', 'Pinterest', 'LinkedIn'].map((platform) => (
                 <span
                   key={platform}
@@ -151,13 +151,13 @@ export function Footer() {
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="text-xs text-emerald-200/70 font-mono">
-                  quotes@greenstone-demo.example
+                  quotes@greenstone-landscaping.com
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="text-xs text-emerald-200/70 font-mono">
-                  (813) 555-0194 (Fictional Demo)
+                  (813) 555-0194
                 </span>
               </div>
             </div>
@@ -180,12 +180,11 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-300/60">
-          <p>© {currentYear} Greenstone Landscaping. Demonstration website concept.</p>
+          <p>© {currentYear} Greenstone Landscaping LLC. All rights reserved.</p>
 
           <div className="flex items-center gap-1.5 text-emerald-200">
-            <span>Crafted by</span>
+            <span>Designed by</span>
             <span className="font-semibold text-emerald-400">Brandspire</span>
-            <span>• Premium Agency Portfolio Concept</span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -194,7 +193,11 @@ export function Footer() {
             </Link>
             <span className="text-white/20">•</span>
             <Link href="/about" className="hover:text-white transition-colors">
-              Concept Details
+              About Us
+            </Link>
+            <span className="text-white/20">•</span>
+            <Link href="/work" className="hover:text-white transition-colors">
+              Portfolio
             </Link>
           </div>
         </div>

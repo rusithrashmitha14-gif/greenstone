@@ -27,14 +27,14 @@ export default function WorkPage() {
               Curated Outdoor Projects
             </h1>
             <p className="mt-4 text-base sm:text-lg text-text-secondary leading-relaxed">
-              Filter through our sample residential landscape projects across South Tampa, Davis Islands, Hyde Park, and Palma Ceia.
+              Filter through our residential landscape projects across South Tampa, Davis Islands, Hyde Park, and Palma Ceia.
             </p>
 
-            {/* Fictional Concept Banner */}
-            <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted text-left shadow-subtle">
+            {/* Quality Standard Banner */}
+            <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-secondary text-left shadow-subtle">
               <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
               <span>
-                <strong>Demonstration Portfolio:</strong> The case studies below represent concept designs created for Brandspire’s agency showcase.
+                <strong>Craftsmanship Benchmark:</strong> Every project showcases custom grading, premium natural stonework, and acclimatized Florida flora.
               </span>
             </div>
           </div>

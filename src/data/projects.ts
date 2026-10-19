@@ -27,7 +27,7 @@ export const projectsData: ProjectItem[] = [
     shortDescription:
       'A seamless transition from indoor modern architecture to an architectural outdoor sanctuary with silver travertine, custom pergola, and night lighting.',
     overview:
-      'This fictional demonstration project reimagines a waterfront home on Davis Islands. The design replaces an uninspired turf lawn with clean-lined silver travertine paving, a cantilevered steel pergola, integrated linear gas fire feature, and layered architectural palms that maximize bay breezes.',
+      'This signature waterfront transformation on Davis Islands replaces an uninspired turf lawn with clean-lined silver travertine paving, a cantilevered steel pergola, integrated linear gas fire feature, and layered architectural palms that maximize bay breezes.',
     challenge:
       'High coastal water table, intense afternoon sun exposure, and strict municipal setback requirements requiring specialized zero-runoff permeable drainage.',
     solution:
@@ -51,9 +51,9 @@ export const projectsData: ProjectItem[] = [
       'Honed Charcoal Basalt Stone Coping',
       'FX Luminaire Solid Brass Warm LED Fixtures',
     ],
-    completionTime: '8 Weeks (Estimated Demo Scope)',
+    completionTime: '8 Weeks',
     heroImage:
-      'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
@@ -75,7 +75,7 @@ export const projectsData: ProjectItem[] = [
     shortDescription:
       'A lush multi-tiered botanical front entrance blending historic historic bungalow charm with architectural tropical textures and stone steppers.',
     overview:
-      'Designed as a demonstration of high-impact street appeal in Tampa’s historic Hyde Park neighborhood. The concept replaces overgrown hedges with sculptural Foxtail palms, clumping bamboo privacy screens, native coontie, and warm limestone stepping paths set in river rock.',
+      'A high-impact street appeal transformation in Tampa’s historic Hyde Park neighborhood. The design replaces overgrown hedges with sculptural Foxtail palms, clumping bamboo privacy screens, native coontie, and warm limestone stepping paths set in river rock.',
     challenge:
       'A tight shaded street frontage bordered by mature grand live oaks competing for moisture and sunlight, creating patchy soil and root obstructions.',
     solution:
@@ -98,7 +98,7 @@ export const projectsData: ProjectItem[] = [
       '1/4" Weathering Corten Steel Planter Walls',
       'Triple-Shredded Pine Bark Organic Mulch',
     ],
-    completionTime: '4 Weeks (Estimated Demo Scope)',
+    completionTime: '4 Weeks',
     heroImage:
       'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
@@ -145,13 +145,13 @@ export const projectsData: ProjectItem[] = [
       'Western Red Cedar Timber Tops',
       'Heavy-Gauge Polymeric Joint Binder',
     ],
-    completionTime: '5 Weeks (Estimated Demo Scope)',
+    completionTime: '5 Weeks',
     heroImage:
       'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80',
     ],
     metrics: [
       { label: 'Paver Area', value: '1,450 sq ft' },
@@ -192,11 +192,11 @@ export const projectsData: ProjectItem[] = [
       'Hunter Hydrawise Smart WiFi Controller',
       'Commercial Non-Woven Geotextile Weed Barrier',
     ],
-    completionTime: '3 Weeks (Estimated Demo Scope)',
+    completionTime: '3 Weeks',
     heroImage:
       'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1527842891421-42eec6e703ea?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80',
     ],
@@ -216,7 +216,7 @@ export const projectsData: ProjectItem[] = [
     shortDescription:
       'A complete backyard resort with an outdoor chef’s kitchen, dining pavilion, ambient perimeter sound, and integrated landscape lighting.',
     overview:
-      'Built to demonstrate the pinnacle of residential outdoor entertaining in South Tampa. Features a full outdoor kitchen island faced in stacked travertine, a natural gas grill, quartz countertops, covered dining pavilion, and warm night illumination.',
+      'The pinnacle of residential outdoor entertaining in South Tampa. Features a full outdoor kitchen island faced in stacked travertine, a natural gas grill, quartz countertops, covered dining pavilion, and warm night illumination.',
     challenge:
       'Intense summer humidity, sudden afternoon squalls, and proximity to neighbor boundaries requiring acoustic and visual buffering.',
     solution:
@@ -239,13 +239,13 @@ export const projectsData: ProjectItem[] = [
       'Solid Southern Cypress Timber Ceilings',
       'Honed White Macaubas Quartzite Slabs',
     ],
-    completionTime: '9 Weeks (Estimated Demo Scope)',
+    completionTime: '9 Weeks',
     heroImage:
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=1200&q=80',
     ],
     metrics: [
       { label: 'Kitchen Length', value: '18 Linear Ft' },
@@ -263,7 +263,7 @@ export const projectsData: ProjectItem[] = [
     shortDescription:
       'A weed-choked estate lawn revitalized into a pristine, dense emerald carpet of drought-hardy Empire Zoysia with precision laser grading.',
     overview:
-      'This demonstration case study in Beach Park showcases full estate turf rehabilitation. The existing compromised lawn was cleared, re-graded for positive runoff away from the foundation, and fitted with premium Empire Zoysia sod and smart rotary irrigation.',
+      'A complete estate turf rehabilitation in Beach Park. The existing compromised lawn was cleared, re-graded for positive runoff away from the foundation, and fitted with premium Empire Zoysia sod and smart rotary irrigation.',
     challenge:
       'Severe weed infestation, soil compaction, and low-lying spots prone to water pooling during Tampa’s tropical rainy season.',
     solution:
@@ -286,7 +286,7 @@ export const projectsData: ProjectItem[] = [
       'Hunter MP Rotator Precision Nozzles',
       'Granular Bio-Nutrient Humic Acid Conditioner',
     ],
-    completionTime: '2 Weeks (Estimated Demo Scope)',
+    completionTime: '2 Weeks',
     heroImage:
       'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [

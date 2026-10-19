@@ -127,14 +127,14 @@ export function WhyChooseUs() {
               <div className="p-5 rounded-2xl bg-white border border-border-subtle flex items-center justify-between shadow-subtle">
                 <div>
                   <span className="text-xs uppercase tracking-wider text-text-muted font-medium">
-                    Demonstration Standard
+                    Quality Guarantee
                   </span>
                   <p className="text-sm font-semibold text-text-primary mt-0.5">
-                    Concept Principles for Brandspire Portfolio
+                    Florida-Grade Workmanship Warranty
                   </p>
                 </div>
                 <span className="px-2.5 py-1 rounded bg-accent-light text-accent text-xs font-semibold">
-                  Demo Ready
+                  Guaranteed
                 </span>
               </div>
             </FadeIn>

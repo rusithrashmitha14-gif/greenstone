@@ -55,8 +55,8 @@ export function FeaturedProjects() {
                       <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/95 text-text-primary border border-border-subtle backdrop-blur-md shadow-subtle">
                         {project.category}
                       </span>
-                      <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-amber-50 text-amber-800 border border-amber-200/80 backdrop-blur-md">
-                        Demo Concept
+                      <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-50 text-accent border border-accent/20 backdrop-blur-md">
+                        Tampa, FL
                       </span>
                     </div>
 
@@ -112,8 +112,8 @@ export function FeaturedProjects() {
         {/* Portfolio Guarantee / Agency Context Strip */}
         <FadeIn delay={0.2}>
           <div className="mt-12 text-center">
-            <p className="text-xs text-text-muted max-w-xl mx-auto">
-              * All featured case studies represent sample architectural designs and concepts created for this Brandspire web demonstration. Photography curated from licensed architecture and landscape archives.
+            <p className="text-xs text-text-secondary max-w-xl mx-auto">
+              All projects are engineered with Florida-Friendly native horticulture, hurricane-resilient root stabilization, and zero-puddling laser drainage.
             </p>
           </div>
         </FadeIn>

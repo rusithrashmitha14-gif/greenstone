@@ -20,9 +20,9 @@ export function BeforeAfterShowcase() {
       beforeLabel: 'Before: Sinking Concrete & Water Pooling',
       afterLabel: 'After: Silver Travertine & Resilient Palms',
       beforeImage:
-        'https://images.unsplash.com/photo-1508873696983-2df5293cb325?auto=format&fit=crop&w=1600&q=80',
+        'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1600&q=80',
       afterImage:
-        'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1600&q=80',
+        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80',
       stats: [
         { label: 'Drainage Improvement', value: '100% Zero Puddling' },
         { label: 'Surface Temperature', value: '-18°F Cool-Touch' },

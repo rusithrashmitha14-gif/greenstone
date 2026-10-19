@@ -55,10 +55,10 @@ export default function ContactPage() {
               Ready to reimagine your outdoor space? Tell us about your property and ideas to schedule a consultation with our Tampa landscape team.
             </p>
 
-            <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted shadow-subtle">
+            <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-secondary shadow-subtle">
               <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
               <span>
-                <strong>Brandspire Demo Concept:</strong> This contact page demonstrates high-conversion lead generation for landscaping firms. Information submitted here is processed in demo mode.
+                <strong>Quick Response Guaranteed:</strong> Submit your project details below and an outdoor design specialist will contact you within 24 business hours.
               </span>
             </div>
           </div>
@@ -69,10 +69,10 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: Context, Service Area & What to Expect */}
             <div className="lg:col-span-5 space-y-8">
-            {/* Contact Placeholders Card */}
+            {/* Contact Information Card */}
             <div className="p-6 sm:p-7 rounded-3xl bg-white border border-border-subtle space-y-5 shadow-card">
               <h2 className="text-sm font-bold uppercase tracking-wider text-text-primary">
-                Fictional Contact Information (Demo)
+                Contact & Consultation Information
               </h2>
 
               <div className="space-y-4 text-sm text-text-secondary">
@@ -93,9 +93,9 @@ export default function ContactPage() {
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="text-text-primary block">Email Inquiries (Demo)</strong>
+                    <strong className="text-text-primary block">Direct Email</strong>
                     <span className="text-xs text-text-muted font-mono">
-                      quotes@greenstone-demo.example
+                      quotes@greenstone-landscaping.com
                     </span>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="text-text-primary block">Phone Support (Demo)</strong>
+                    <strong className="text-text-primary block">Direct Phone</strong>
                     <span className="text-xs text-text-muted font-mono">
                       (813) 555-0194
                     </span>

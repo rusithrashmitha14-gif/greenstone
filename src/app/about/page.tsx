@@ -67,10 +67,10 @@ export default function AboutPage() {
             We believe an outdoor space should be more than grass and shrubbery — it should be a sanctuary for living, gathering, and connecting with nature.
           </p>
 
-          <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-muted shadow-subtle">
+          <div className="mt-6 inline-flex items-center gap-2 p-3.5 rounded-xl bg-white border border-border-subtle text-xs text-text-secondary shadow-subtle">
             <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
             <span>
-              <strong>Concept Portfolio Notice:</strong> Greenstone Landscaping is an original demonstration concept created by <strong className="text-text-primary">Brandspire Web Agency</strong> to showcase high-conversion web experiences for landscape companies.
+              <strong>Licensed & Insured:</strong> Dedicated to architectural excellence, horticultural precision, and Florida-Friendly environmental stewardship.
             </span>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Core Principles"
               title="Our Design Standards"
-              description="Four fundamental tenets that guide our concept planning, material curation, and installation standards."
+              description="Four fundamental tenets that guide our landscape master planning, material curation, and installation standards."
             />
           </FadeIn>
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: 'Greenstone Landscaping | Premium Landscape Design & Outdoor Living in Tampa, FL',
   },
   description:
-    'Thoughtfully designed landscapes, bespoke stone patios, lush subtropical gardens, and estate lawn maintenance in Tampa, Florida. A portfolio demonstration concept by Brandspire.',
+    'Thoughtfully designed landscapes, bespoke stone patios, lush subtropical gardens, and estate lawn maintenance in Tampa, Florida.',
   keywords: [
     'Tampa landscaping',
     'landscape design Tampa FL',
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
     'Florida friendly garden design',
     'estate lawn care Tampa',
   ],
-  authors: [{ name: 'Brandspire Agency' }],
-  metadataBase: new URL('https://greenstone-landscaping-demo.example'),
+  authors: [{ name: 'Greenstone Landscaping' }],
+  metadataBase: new URL('https://greenstone-landscaping.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://greenstone-landscaping-demo.example',
+    url: 'https://greenstone-landscaping.com',
     siteName: 'Greenstone Landscaping',
     title: 'Greenstone Landscaping | Premium Landscape Design in Tampa, FL',
     description:
       'Transform your outdoor space with tailored landscape master planning, travertine patios, and native Florida botanicals.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1200&h=630&q=80',
+        url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&h=630&q=80',
         width: 1200,
         height: 630,
-        alt: 'Greenstone Landscaping Luxury Outdoor Living Demo',
+        alt: 'Greenstone Landscaping Luxury Outdoor Living',
       },
     ],
   },

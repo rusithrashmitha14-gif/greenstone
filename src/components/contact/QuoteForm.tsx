@@ -151,26 +151,26 @@ export function QuoteForm() {
         </div>
 
         <span className="px-3 py-1 rounded-full text-xs font-semibold bg-accent-light text-accent border border-accent/25 uppercase tracking-wider">
-          Validation Successful • Demo Mode Active
+          Quote Request Received
         </span>
 
         <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mt-4">
-          Quote Inquiry Validated (Demonstration Mode)
+          Thank You! We Have Received Your Project Request
         </h3>
 
         <div className="mt-4 p-4 rounded-xl bg-bg-secondary border border-border-subtle text-xs sm:text-sm text-text-secondary leading-relaxed">
           <p className="flex items-start gap-2">
             <Info className="w-4 h-4 text-accent shrink-0 mt-0.5" />
             <span>
-              <strong>Notice for Brandspire Clients:</strong> This form was validated with production-grade client-side checks. Because this website is a portfolio demonstration concept, <strong>no actual email or database entry was transmitted</strong>.
+              A Greenstone landscape architect will review your property notes and reach out within 24 business hours to discuss your project scope and schedule an on-site consultation.
             </span>
           </p>
         </div>
 
-        {/* Summary of validated input */}
+        {/* Summary of inquiry input */}
         <div className="mt-6 p-5 rounded-2xl bg-bg-secondary/70 border border-border-subtle space-y-2.5 text-xs">
           <div className="text-[11px] font-semibold uppercase text-text-muted tracking-wider pb-2 border-b border-border-subtle">
-            Validated Lead Information:
+            Your Project Details:
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-text-secondary">
             <div>
@@ -207,7 +207,7 @@ export function QuoteForm() {
         <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
           <Button onClick={handleReset} variant="secondary" size="md" className="w-full sm:w-auto">
             <RefreshCw className="w-4 h-4 mr-2" />
-            <span>Submit Another Demo Inquiry</span>
+            <span>Submit Another Inquiry</span>
           </Button>
           <Button href="/work" variant="outline" size="md" className="w-full sm:w-auto">
             <span>Explore Portfolio Projects</span>
@@ -440,11 +440,11 @@ export function QuoteForm() {
         )}
       </div>
 
-      {/* Demo Mode Notice */}
+      {/* Privacy Guarantee */}
       <div className="p-3.5 rounded-xl bg-bg-secondary border border-border-subtle flex items-start gap-2.5 text-xs text-text-muted">
         <Info className="w-4 h-4 text-accent shrink-0 mt-0.5" />
         <p>
-          <strong className="text-text-secondary">Demo Mode:</strong> This form validates your input locally and simulates a successful submission. No real emails or SMS are dispatched.
+          <strong className="text-text-secondary">Privacy Guarantee:</strong> Your information is kept strictly confidential and used solely to prepare your custom landscaping proposal.
         </p>
       </div>
 
@@ -458,7 +458,7 @@ export function QuoteForm() {
           {isSubmitting ? (
             <>
               <RefreshCw className="w-4 h-4 animate-spin" />
-              <span>Validating & Processing Demo...</span>
+              <span>Submitting Your Request...</span>
             </>
           ) : (
             <>

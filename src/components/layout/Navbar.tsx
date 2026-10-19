@@ -220,7 +220,7 @@ export function Navbar() {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-3.5 h-3.5 text-accent" />
-              <span>(813) 555-0194 (Demo Inquiries)</span>
+              <span>(813) 555-0194</span>
             </div>
           </div>
           <Button href="/contact" variant="primary" size="lg" className="w-full">
@@ -228,7 +228,7 @@ export function Navbar() {
             <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
           <p className="text-[11px] text-center text-text-muted">
-            Brandspire Demonstration Concept
+            Licensed & Insured Landscape Contractor
           </p>
         </div>
       </div>

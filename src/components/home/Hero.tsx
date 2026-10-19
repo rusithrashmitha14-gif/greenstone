@@ -66,11 +66,11 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Fictional Portfolio Concept Disclosure Banner */}
-            <div className="mt-7 pt-5 border-t border-border-subtle flex items-center gap-2 text-xs text-text-muted">
+            {/* Florida Craftsmanship Trust Signal */}
+            <div className="mt-7 pt-5 border-t border-border-subtle flex items-center gap-2 text-xs text-text-secondary">
               <Shield className="w-3.5 h-3.5 text-accent shrink-0" />
               <span>
-                Demonstration portfolio concept built by <strong className="text-text-primary">Brandspire</strong>. All projects & case studies are fictional concept showcases.
+                Licensed & Insured Landscape Contractor • Serving Davis Islands, Hyde Park & Greater Tampa Bay
               </span>
             </div>
           </div>
