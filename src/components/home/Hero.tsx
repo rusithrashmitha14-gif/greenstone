@@ -29,7 +29,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <div className="max-w-2xl bg-white/94 backdrop-blur-lg rounded-3xl p-7 sm:p-11 border border-white/80 shadow-2xl">
+          <div className="max-w-2xl bg-white/98 backdrop-blur-xl rounded-3xl p-7 sm:p-11 border border-white/90 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)]">
             {/* Location Badge */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-accent-light/80 border border-accent/25 mb-5 shadow-xs">
               <span className="relative flex h-2 w-2">
@@ -42,15 +42,15 @@ export function Hero() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-text-primary leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#111e13] leading-[1.12]">
               Transform Your Outdoor Space{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-emerald-700">
                 Into Something Extraordinary.
               </span>
             </h1>
 
-            {/* Supporting Copy */}
-            <p className="mt-4 sm:mt-5 text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
+            {/* Supporting Copy - High Contrast */}
+            <p className="mt-4 sm:mt-5 text-base sm:text-lg text-[#1e2f20] font-medium leading-relaxed">
               Thoughtfully designed landscapes, beautifully maintained lawns, and outdoor spaces made for living.
             </p>
 
@@ -67,8 +67,8 @@ export function Hero() {
             </div>
 
             {/* Florida Craftsmanship Trust Signal */}
-            <div className="mt-7 pt-5 border-t border-border-subtle flex items-center gap-2 text-xs text-text-secondary">
-              <Shield className="w-3.5 h-3.5 text-accent shrink-0" />
+            <div className="mt-7 pt-5 border-t border-border-subtle/80 flex items-center gap-2 text-xs text-[#223624] font-medium">
+              <Shield className="w-4 h-4 text-accent shrink-0" />
               <span>
                 Licensed & Insured Landscape Contractor • Serving Davis Islands, Hyde Park & Greater Tampa Bay
               </span>
